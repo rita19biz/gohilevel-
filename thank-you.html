@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — LuxeGrow Hair Growth Oil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="thankyou-page">
+
+  <div class="ty-wrapper">
+
+    <!-- Animated checkmark -->
+    <div class="ty-check">
+      <svg viewBox="0 0 52 52" class="ty-checkmark">
+        <circle class="ty-checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="ty-checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+      </svg>
+    </div>
+
+    <div class="ty-content">
+      <p class="ty-tag">Order Confirmed</p>
+      <h1 class="ty-headline">Thank You, <span id="customerName">Beautiful!</span></h1>
+      <p class="ty-sub">Your LuxeGrow Hair Growth Oil order has been received and is being prepared for shipment. You'll receive a confirmation email shortly with your order details and tracking information.</p>
+
+      <!-- Order Summary Box -->
+      <div class="ty-order-box">
+        <h3>Order Summary</h3>
+        <div class="ty-order-row">
+          <span>Package</span>
+          <span id="summaryPackage">—</span>
+        </div>
+        <div class="ty-order-row">
+          <span>Name</span>
+          <span id="summaryName">—</span>
+        </div>
+        <div class="ty-order-row">
+          <span>Email</span>
+          <span id="summaryEmail">—</span>
+        </div>
+        <div class="ty-order-row">
+          <span>Shipping to</span>
+          <span id="summaryAddress">—</span>
+        </div>
+        <div class="ty-order-row ty-order-row--total">
+          <span>Estimated Delivery</span>
+          <span id="summaryDelivery">5–7 Business Days</span>
+        </div>
+      </div>
+
+      <!-- What's Next -->
+      <div class="ty-steps">
+        <h3>What Happens Next?</h3>
+        <div class="ty-step">
+          <div class="ty-step__num">1</div>
+          <div>
+            <strong>Order Confirmation Email</strong>
+            <p>Check your inbox (and spam folder) for your order confirmation within the next few minutes.</p>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step__num">2</div>
+          <div>
+            <strong>Packed with Care</strong>
+            <p>Our team carefully packs your LuxeGrow order within 24 hours of receipt.</p>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step__num">3</div>
+          <div>
+            <strong>Shipped &amp; Tracked</strong>
+            <p>You'll receive a tracking number via email once your order is on its way.</p>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step__num">4</div>
+          <div>
+            <strong>Start Your Hair Journey</strong>
+            <p>Apply 3–4 times per week and document your progress. Results begin in as little as 2 weeks!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Share -->
+      <div class="ty-share">
+        <p>Love LuxeGrow already? Share the good news:</p>
+        <div class="ty-share__btns">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://luxegrow.com" target="_blank" rel="noopener" class="btn btn--social btn--facebook">Share on Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text=I%20just%20ordered%20LuxeGrow%20Hair%20Growth%20Oil%20and%20I%20can%27t%20wait%20to%20see%20my%20results!%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="btn btn--social btn--twitter">Share on X</a>
+        </div>
+      </div>
+
+      <a href="index.html" class="btn btn--outline ty-back">← Back to LuxeGrow</a>
+    </div>
+
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="thankyou.js"></script>
+</body>
+</html>
