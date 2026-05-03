@@ -1,0 +1,736 @@
+<!-- ================================================================
+     LUXEGROW HAIR GROWTH OIL — ALL-IN-ONE EMBED BLOCK
+     Paste this entire block into your web builder's custom code area.
+     Both the sales page and thank-you screen are included.
+     No external files needed (Google Fonts loaded via CDN).
+     ================================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── Reset ─────────────────────────────────────────────────────── */
+#lg-root *, #lg-root *::before, #lg-root *::after { box-sizing: border-box; margin: 0; padding: 0; }
+#lg-root { scroll-behavior: smooth; font-family: 'Inter', sans-serif; color: #3D2B10; background: #FAF7F2; line-height: 1.6; }
+
+/* ── Tokens ─────────────────────────────────────────────────────── */
+#lg-root {
+  --gold: #C9A84C; --gold-light: #E8CC7A; --gold-dark: #A07832;
+  --cream: #FAF7F2; --dark: #1A1208; --dark-mid: #2E2010;
+  --text: #3D2B10; --text-light: #7A6247; --white: #FFFFFF;
+  --border: #EAE0D0; --green-light: #52B788;
+  --radius: 12px; --radius-lg: 20px;
+  --shadow: 0 4px 24px rgba(26,18,8,0.10);
+  --shadow-lg: 0 12px 48px rgba(26,18,8,0.18);
+}
+
+/* ── Layout ─────────────────────────────────────────────────────── */
+#lg-root .lg-container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+#lg-root h1, #lg-root h2, #lg-root h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+#lg-root .lg-section { padding: 90px 0; }
+#lg-root .lg-section-title { font-size: clamp(1.8rem,3vw,2.8rem); color: var(--dark); text-align: center; margin-bottom: 12px; }
+#lg-root .lg-section-sub { font-size: 1.05rem; color: var(--text-light); text-align: center; max-width: 620px; margin: 0 auto 48px; }
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+#lg-root .lg-btn { display: inline-block; padding: 14px 32px; border-radius: 50px; font-family:'Inter',sans-serif; font-weight:600; font-size:1rem; text-decoration:none; cursor:pointer; border:2px solid transparent; transition:all 0.25s ease; text-align:center; }
+#lg-root .lg-btn-primary { background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:var(--white); border-color:var(--gold-dark); box-shadow:0 4px 18px rgba(201,168,76,.40); }
+#lg-root .lg-btn-primary:hover { background:linear-gradient(135deg,var(--gold-light),var(--gold)); transform:translateY(-2px); box-shadow:0 8px 28px rgba(201,168,76,.55); }
+#lg-root .lg-btn-outline { background:transparent; color:var(--gold-dark); border-color:var(--gold); }
+#lg-root .lg-btn-outline:hover { background:var(--gold); color:var(--white); transform:translateY(-2px); }
+#lg-root .lg-btn-lg { padding:18px 44px; font-size:1.15rem; }
+#lg-root .lg-btn-full { width:100%; padding:18px; font-size:1.1rem; }
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+#lg-root .lg-hero { background:linear-gradient(160deg,var(--dark) 0%,var(--dark-mid) 60%,#3D2B10 100%); color:var(--white); text-align:center; padding:90px 24px 60px; position:relative; overflow:hidden; }
+#lg-root .lg-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 30%,rgba(201,168,76,.15) 0%,transparent 60%); }
+#lg-root .lg-hero-badge { display:inline-block; background:rgba(201,168,76,.2); border:1px solid rgba(201,168,76,.5); color:var(--gold-light); padding:8px 20px; border-radius:50px; font-size:.85rem; font-weight:500; letter-spacing:.5px; margin-bottom:28px; position:relative; }
+#lg-root .lg-hero-headline { font-size:clamp(2.2rem,5vw,3.8rem); color:var(--white); max-width:760px; margin:0 auto 20px; line-height:1.1; position:relative; }
+#lg-root .lg-hero-headline span { color:var(--gold-light); display:block; }
+#lg-root .lg-hero-sub { font-size:clamp(1rem,1.5vw,1.15rem); color:rgba(255,255,255,.78); max-width:620px; margin:0 auto 36px; position:relative; }
+#lg-root .lg-hero-guarantee { margin-top:16px; font-size:.85rem; color:rgba(255,255,255,.55); position:relative; }
+
+/* Bottle */
+#lg-root .lg-hero-image { display:flex; justify-content:center; margin-top:56px; position:relative; }
+#lg-root .lg-product-visual { position:relative; display:inline-flex; align-items:center; justify-content:center; }
+#lg-root .lg-bottle { width:120px; height:220px; background:linear-gradient(160deg,#2D1F0A 0%,#1A1208 50%,#3D2B10 100%); border-radius:16px 16px 24px 24px; border:1px solid rgba(201,168,76,.4); display:flex; align-items:center; justify-content:center; box-shadow:0 20px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(201,168,76,.3); position:relative; z-index:2; animation:lg-float 3s ease-in-out infinite; }
+#lg-root .lg-bottle::before { content:''; position:absolute; top:-18px; left:50%; transform:translateX(-50%); width:36px; height:22px; background:linear-gradient(180deg,#3D2B10,#2D1F0A); border-radius:6px 6px 0 0; border:1px solid rgba(201,168,76,.4); border-bottom:none; }
+#lg-root .lg-bottle-label { text-align:center; padding:16px 10px; }
+#lg-root .lg-label-brand { font-family:'Playfair Display',serif; color:var(--gold-light); font-size:.75rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:8px; }
+#lg-root .lg-label-name { font-family:'Playfair Display',serif; color:var(--white); font-size:.8rem; line-height:1.3; margin-bottom:8px; }
+#lg-root .lg-label-size { color:rgba(255,255,255,.4); font-size:.65rem; }
+#lg-root .lg-glow { position:absolute; width:200px; height:200px; background:radial-gradient(circle,rgba(201,168,76,.35) 0%,transparent 70%); border-radius:50%; z-index:1; animation:lg-glow 3s ease-in-out infinite; }
+@keyframes lg-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes lg-glow  { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.15)} }
+
+/* ── Trust Bar ──────────────────────────────────────────────────── */
+#lg-root .lg-trust { background:var(--dark); padding:20px 24px; border-bottom:1px solid rgba(201,168,76,.2); }
+#lg-root .lg-trust-inner { max-width:1140px; margin:0 auto; display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; }
+#lg-root .lg-trust-item { display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.7); font-size:.88rem; font-weight:500; }
+
+/* ── Problem ────────────────────────────────────────────────────── */
+#lg-root .lg-problem { background:var(--white); }
+#lg-root .lg-pain-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; margin-bottom:40px; }
+#lg-root .lg-pain-card { background:var(--cream); border:1px solid var(--border); border-radius:var(--radius); padding:28px 24px; text-align:center; }
+#lg-root .lg-pain-icon { font-size:2rem; margin-bottom:14px; }
+#lg-root .lg-pain-card p { color:var(--text-light); font-size:.95rem; }
+#lg-root .lg-bridge { text-align:center; font-size:1.1rem; color:var(--text); max-width:640px; margin:0 auto; padding:28px; background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(201,168,76,.04)); border-left:4px solid var(--gold); border-radius:0 var(--radius) var(--radius) 0; }
+
+/* ── Features ───────────────────────────────────────────────────── */
+#lg-root .lg-features { background:var(--cream); }
+#lg-root .lg-features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; }
+#lg-root .lg-feature-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:32px 28px; transition:transform .25s,box-shadow .25s; }
+#lg-root .lg-feature-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+#lg-root .lg-feature-icon { font-size:2.4rem; margin-bottom:16px; }
+#lg-root .lg-feature-card h3 { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--dark); margin-bottom:10px; }
+#lg-root .lg-feature-card p { color:var(--text-light); font-size:.93rem; line-height:1.7; }
+
+/* ── How It Works ───────────────────────────────────────────────── */
+#lg-root .lg-how { background:var(--dark); }
+#lg-root .lg-how .lg-section-title { color:var(--white); }
+#lg-root .lg-how .lg-section-sub   { color:rgba(255,255,255,.6); }
+#lg-root .lg-steps { display:flex; align-items:flex-start; justify-content:center; gap:16px; flex-wrap:wrap; }
+#lg-root .lg-step { background:rgba(255,255,255,.06); border:1px solid rgba(201,168,76,.25); border-radius:var(--radius-lg); padding:36px 28px; max-width:280px; text-align:center; flex:1; min-width:220px; }
+#lg-root .lg-step-num { font-family:'Playfair Display',serif; font-size:3rem; color:var(--gold); line-height:1; margin-bottom:16px; }
+#lg-root .lg-step h3  { color:var(--white); font-size:1.1rem; margin-bottom:10px; }
+#lg-root .lg-step p   { color:rgba(255,255,255,.65); font-size:.92rem; line-height:1.7; }
+#lg-root .lg-step-arrow { font-size:2rem; color:var(--gold); align-self:center; opacity:.5; }
+
+/* ── Testimonials ───────────────────────────────────────────────── */
+#lg-root .lg-testimonials { background:var(--cream); }
+#lg-root .lg-testi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px; }
+#lg-root .lg-testi-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:32px 28px; }
+#lg-root .lg-testi-card.featured { background:linear-gradient(160deg,var(--dark),var(--dark-mid)); border-color:rgba(201,168,76,.35); transform:scale(1.02); }
+#lg-root .lg-testi-stars { color:var(--gold); font-size:1rem; letter-spacing:2px; margin-bottom:16px; }
+#lg-root .lg-testi-text { font-size:.97rem; line-height:1.75; color:var(--text); margin-bottom:24px; font-style:italic; }
+#lg-root .lg-testi-card.featured .lg-testi-text { color:rgba(255,255,255,.85); }
+#lg-root .lg-testi-author { display:flex; align-items:center; gap:14px; }
+#lg-root .lg-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-dark)); display:flex; align-items:center; justify-content:center; color:var(--white); font-weight:700; font-size:1.1rem; flex-shrink:0; }
+#lg-root .lg-testi-author strong { display:block; color:var(--dark); font-size:.95rem; }
+#lg-root .lg-testi-card.featured .lg-testi-author strong { color:var(--white); }
+#lg-root .lg-testi-author span { font-size:.8rem; color:var(--text-light); }
+#lg-root .lg-testi-card.featured .lg-testi-author span { color:rgba(255,255,255,.5); }
+
+/* ── Pricing ────────────────────────────────────────────────────── */
+#lg-root .lg-pricing { background:var(--white); }
+#lg-root .lg-pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px; align-items:stretch; }
+#lg-root .lg-price-card { background:var(--cream); border:2px solid var(--border); border-radius:var(--radius-lg); padding:36px 28px; text-align:center; position:relative; display:flex; flex-direction:column; gap:12px; }
+#lg-root .lg-price-card.popular { background:var(--dark); border-color:var(--gold); color:var(--white); transform:scale(1.03); box-shadow:var(--shadow-lg); }
+#lg-root .lg-price-badge { position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:var(--white); padding:5px 18px; border-radius:50px; font-size:.78rem; font-weight:600; white-space:nowrap; }
+#lg-root .lg-price-label   { font-size:.8rem; text-transform:uppercase; letter-spacing:2px; color:var(--gold); font-weight:600; }
+#lg-root .lg-price-bottles { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--dark); }
+#lg-root .lg-price-card.popular .lg-price-bottles { color:var(--white); }
+#lg-root .lg-price-amount  { font-family:'Playfair Display',serif; font-size:2.8rem; color:var(--dark); line-height:1; }
+#lg-root .lg-price-card.popular .lg-price-amount  { color:var(--gold-light); }
+#lg-root .lg-price-per     { font-size:.85rem; color:var(--text-light); }
+#lg-root .lg-price-card.popular .lg-price-per     { color:rgba(255,255,255,.55); }
+#lg-root .lg-price-perks   { list-style:none; text-align:left; font-size:.9rem; color:var(--text); line-height:2; flex:1; }
+#lg-root .lg-price-card.popular .lg-price-perks   { color:rgba(255,255,255,.8); }
+
+/* ── Guarantee ──────────────────────────────────────────────────── */
+#lg-root .lg-guarantee { background:linear-gradient(160deg,#1A3A2A,#0D2018); }
+#lg-root .lg-guarantee-inner { display:flex; align-items:center; gap:60px; flex-wrap:wrap; justify-content:center; }
+#lg-root .lg-guarantee-badge { text-align:center; flex-shrink:0; background:rgba(255,255,255,.06); border:2px solid rgba(82,183,136,.4); border-radius:50%; width:160px; height:160px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+#lg-root .lg-guarantee-icon  { font-size:2rem; margin-bottom:4px; }
+#lg-root .lg-guarantee-days  { font-family:'Playfair Display',serif; font-size:2.8rem; color:var(--green-light); line-height:1; }
+#lg-root .lg-guarantee-label { font-size:.75rem; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,.5); }
+#lg-root .lg-guarantee-text  { max-width:560px; }
+#lg-root .lg-guarantee-text h2 { color:var(--white); font-size:2rem; margin-bottom:16px; }
+#lg-root .lg-guarantee-text p  { color:rgba(255,255,255,.72); font-size:1rem; line-height:1.75; margin-bottom:12px; }
+
+/* ── FAQ ────────────────────────────────────────────────────────── */
+#lg-root .lg-faq       { background:var(--cream); }
+#lg-root .lg-faq-list  { max-width:740px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+#lg-root .lg-faq-item  { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+#lg-root .lg-faq-item summary { padding:20px 24px; font-weight:600; font-size:1rem; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+#lg-root .lg-faq-item summary::-webkit-details-marker { display:none; }
+#lg-root .lg-faq-item summary::after { content:'+'; font-size:1.4rem; color:var(--gold); flex-shrink:0; transition:transform .25s; }
+#lg-root .lg-faq-item[open] summary::after { transform:rotate(45deg); }
+#lg-root .lg-faq-item p { padding:0 24px 20px; color:var(--text-light); font-size:.95rem; line-height:1.75; }
+
+/* ── Order Form ─────────────────────────────────────────────────── */
+#lg-root .lg-order { background:linear-gradient(160deg,var(--dark),var(--dark-mid)); }
+#lg-root .lg-order-wrap { display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start; }
+#lg-root .lg-order-left h2 { font-size:clamp(1.8rem,2.5vw,2.4rem); color:var(--white); margin-bottom:16px; }
+#lg-root .lg-order-left p  { color:rgba(255,255,255,.65); font-size:1rem; line-height:1.7; margin-bottom:28px; }
+#lg-root .lg-order-trust { display:flex; flex-direction:column; gap:10px; }
+#lg-root .lg-order-trust span { color:var(--gold-light); font-size:.92rem; font-weight:500; }
+#lg-root .lg-form { background:var(--white); border-radius:var(--radius-lg); padding:40px 36px; box-shadow:var(--shadow-lg); }
+#lg-root .lg-form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+#lg-root .lg-form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:18px; }
+#lg-root .lg-form-group label { font-size:.85rem; font-weight:600; color:var(--dark); text-transform:uppercase; letter-spacing:.5px; }
+#lg-root .lg-form-group input,
+#lg-root .lg-form-group select,
+#lg-root .lg-form-group textarea { padding:12px 16px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Inter',sans-serif; font-size:.95rem; color:var(--text); background:var(--cream); transition:border-color .2s,box-shadow .2s; outline:none; }
+#lg-root .lg-form-group input:focus,
+#lg-root .lg-form-group select:focus,
+#lg-root .lg-form-group textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,.15); background:var(--white); }
+#lg-root .lg-form-group input.invalid,
+#lg-root .lg-form-group select.invalid { border-color:#e53e3e; box-shadow:0 0 0 3px rgba(229,62,62,.1); }
+#lg-root .lg-form-error { font-size:.78rem; color:#e53e3e; min-height:16px; }
+#lg-root .lg-form-disclaimer { font-size:.75rem; color:var(--text-light); text-align:center; margin-top:14px; line-height:1.6; }
+#lg-root .lg-form-disclaimer a { color:var(--gold-dark); text-decoration:underline; }
+
+/* ── Footer ─────────────────────────────────────────────────────── */
+#lg-root .lg-footer { background:var(--dark); padding:60px 0 30px; border-top:1px solid rgba(201,168,76,.15); }
+#lg-root .lg-footer-inner { display:flex; justify-content:space-between; align-items:flex-start; gap:40px; flex-wrap:wrap; margin-bottom:40px; }
+#lg-root .lg-footer-logo  { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--gold-light); margin-bottom:10px; }
+#lg-root .lg-footer-brand p { color:rgba(255,255,255,.45); font-size:.88rem; max-width:280px; line-height:1.7; }
+#lg-root .lg-footer-links   { display:flex; flex-direction:column; gap:10px; }
+#lg-root .lg-footer-links a { color:rgba(255,255,255,.5); font-size:.88rem; text-decoration:none; transition:color .2s; }
+#lg-root .lg-footer-links a:hover { color:var(--gold-light); }
+#lg-root .lg-footer-bottom { border-top:1px solid rgba(255,255,255,.08); padding-top:24px; text-align:center; }
+#lg-root .lg-footer-bottom p { color:rgba(255,255,255,.3); font-size:.8rem; line-height:1.7; }
+
+/* ── Thank You Page ─────────────────────────────────────────────── */
+#lg-thankyou { display:none; background:linear-gradient(160deg,var(--dark) 0%,var(--dark-mid) 100%); min-height:100vh; align-items:center; justify-content:center; padding:40px 24px; }
+#lg-thankyou.active { display:flex; }
+#lg-root .lg-main.hidden { display:none; }
+#lg-root .lg-ty-wrapper { max-width:680px; width:100%; text-align:center; position:relative; z-index:2; }
+#lg-root .lg-ty-check { margin-bottom:32px; }
+#lg-root .lg-ty-checkmark { width:80px; height:80px; }
+#lg-root .lg-ty-circle { stroke:var(--green-light); stroke-width:2; stroke-dasharray:166; stroke-dashoffset:166; fill:none; }
+#lg-root .lg-ty-check-path { stroke:var(--green-light); stroke-width:2.5; stroke-linecap:round; stroke-dasharray:48; stroke-dashoffset:48; fill:none; }
+#lg-root .lg-ty-circle.animate  { animation:lg-stroke .6s cubic-bezier(.65,0,.45,1) forwards; }
+#lg-root .lg-ty-check-path.animate { animation:lg-stroke .3s cubic-bezier(.65,0,.45,1) .7s forwards; }
+@keyframes lg-stroke { 100%{stroke-dashoffset:0} }
+#lg-root .lg-ty-content { background:rgba(255,255,255,.04); border:1px solid rgba(201,168,76,.2); border-radius:var(--radius-lg); padding:48px 40px; }
+#lg-root .lg-ty-tag { display:inline-block; background:rgba(82,183,136,.15); border:1px solid rgba(82,183,136,.35); color:var(--green-light); padding:6px 16px; border-radius:50px; font-size:.8rem; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:20px; }
+#lg-root .lg-ty-headline { font-size:clamp(2rem,4vw,3rem); color:var(--white); margin-bottom:16px; }
+#lg-root .lg-ty-headline span { color:var(--gold-light); }
+#lg-root .lg-ty-sub { color:rgba(255,255,255,.65); font-size:1rem; line-height:1.75; margin-bottom:36px; }
+#lg-root .lg-ty-order-box { background:rgba(255,255,255,.05); border:1px solid rgba(201,168,76,.2); border-radius:var(--radius); padding:28px; margin-bottom:36px; text-align:left; }
+#lg-root .lg-ty-order-box h3 { color:var(--gold-light); font-size:.85rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+#lg-root .lg-ty-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06); font-size:.9rem; }
+#lg-root .lg-ty-row span:first-child { color:rgba(255,255,255,.5); }
+#lg-root .lg-ty-row span:last-child  { color:var(--white); font-weight:500; }
+#lg-root .lg-ty-row.total { border-bottom:none; padding-top:16px; }
+#lg-root .lg-ty-row.total span:last-child { color:var(--green-light); font-weight:600; }
+#lg-root .lg-ty-steps { text-align:left; margin-bottom:36px; }
+#lg-root .lg-ty-steps h3 { color:var(--white); font-size:1.1rem; margin-bottom:20px; text-align:center; }
+#lg-root .lg-ty-step { display:flex; align-items:flex-start; gap:18px; margin-bottom:20px; }
+#lg-root .lg-ty-step-num { background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:var(--white); font-weight:700; font-size:.85rem; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+#lg-root .lg-ty-step strong { color:var(--white); display:block; margin-bottom:4px; font-size:.95rem; }
+#lg-root .lg-ty-step p { color:rgba(255,255,255,.55); font-size:.88rem; line-height:1.6; }
+#lg-root .lg-ty-share { margin-bottom:32px; }
+#lg-root .lg-ty-share p { color:rgba(255,255,255,.55); margin-bottom:16px; font-size:.9rem; }
+#lg-root .lg-ty-share-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+#lg-root .lg-btn-social { padding:10px 24px; font-size:.88rem; border-radius:8px; }
+#lg-root .lg-btn-fb { background:#1877F2; color:var(--white); border:none; }
+#lg-root .lg-btn-fb:hover { background:#0d65d9; transform:translateY(-2px); }
+#lg-root .lg-btn-x  { background:#000; color:var(--white); border:none; }
+#lg-root .lg-btn-x:hover  { background:#222; transform:translateY(-2px); }
+#lg-confetti { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:999; }
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media(max-width:900px){
+  #lg-root .lg-order-wrap   { grid-template-columns:1fr; gap:36px; }
+  #lg-root .lg-steps        { flex-direction:column; align-items:center; }
+  #lg-root .lg-step-arrow   { transform:rotate(90deg); }
+  #lg-root .lg-guarantee-inner { gap:32px; text-align:center; }
+  #lg-root .lg-guarantee-text  { text-align:center; }
+  #lg-root .lg-price-card.popular      { transform:none; }
+  #lg-root .lg-testi-card.featured     { transform:none; }
+}
+@media(max-width:600px){
+  #lg-root .lg-form-row   { grid-template-columns:1fr; }
+  #lg-root .lg-form       { padding:28px 20px; }
+  #lg-root .lg-ty-content { padding:32px 20px; }
+  #lg-root .lg-trust-inner { gap:20px; }
+  #lg-root .lg-footer-inner { flex-direction:column; }
+}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MAIN SALES PAGE
+═══════════════════════════════════════════════════════════════════ -->
+<div id="lg-root">
+
+  <!-- SALES PAGE -->
+  <div class="lg-main" id="lg-main">
+
+    <!-- HERO -->
+    <section class="lg-hero">
+      <div class="lg-hero-badge">★★★★★ Over 12,000 Happy Customers</div>
+      <h1 class="lg-hero-headline">
+        Stop Hiding Your Hair.<br>
+        <span>Start Growing It Back.</span>
+      </h1>
+      <p class="lg-hero-sub">LuxeGrow Hair Growth Oil is a 100% natural, clinically-inspired blend that reawakens dormant follicles, reduces shedding, and delivers visibly thicker hair in just 30 days — or your money back.</p>
+      <a href="#lg-order" class="lg-btn lg-btn-primary lg-btn-lg">Get My Bottle Now — $39.99</a>
+      <p class="lg-hero-guarantee">🔒 30-Day Money-Back Guarantee &nbsp;|&nbsp; Free Shipping Over $50</p>
+      <div class="lg-hero-image">
+        <div class="lg-product-visual">
+          <div class="lg-bottle">
+            <div class="lg-bottle-label">
+              <div class="lg-label-brand">LuxeGrow</div>
+              <div class="lg-label-name">Hair Growth<br>Oil</div>
+              <div class="lg-label-size">60ml</div>
+            </div>
+          </div>
+          <div class="lg-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="lg-trust">
+      <div class="lg-trust-inner">
+        <div class="lg-trust-item"><span>🌿</span><span>100% Natural Ingredients</span></div>
+        <div class="lg-trust-item"><span>🧪</span><span>Dermatologist Approved</span></div>
+        <div class="lg-trust-item"><span>🚫</span><span>No Parabens or Sulfates</span></div>
+        <div class="lg-trust-item"><span>♻️</span><span>Eco-Friendly Packaging</span></div>
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section class="lg-section lg-problem">
+      <div class="lg-container">
+        <h2 class="lg-section-title">You're Not Alone in This Struggle</h2>
+        <p class="lg-section-sub">Millions of people deal with thinning hair, slow growth, and excessive shedding every day. The causes? Stress, hormonal shifts, poor nutrition, heat damage — the list goes on.</p>
+        <div class="lg-pain-cards">
+          <div class="lg-pain-card"><div class="lg-pain-icon">😔</div><p>Noticing more hair in the shower drain than ever before</p></div>
+          <div class="lg-pain-card"><div class="lg-pain-icon">😞</div><p>Hair that grows slowly and breaks before reaching your desired length</p></div>
+          <div class="lg-pain-card"><div class="lg-pain-icon">😟</div><p>A thinning scalp that's robbing your confidence</p></div>
+          <div class="lg-pain-card"><div class="lg-pain-icon">😤</div><p>Wasted money on products that promised everything and delivered nothing</p></div>
+        </div>
+        <p class="lg-bridge">That changes today. LuxeGrow was formulated specifically to address the <strong>root cause</strong> of hair loss — not just the symptoms.</p>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="lg-section lg-features">
+      <div class="lg-container">
+        <h2 class="lg-section-title">The Science Behind Every Drop</h2>
+        <p class="lg-section-sub">Our proprietary blend of 12 potent botanicals works synergistically to nourish your scalp from within.</p>
+        <div class="lg-features-grid">
+          <div class="lg-feature-card"><div class="lg-feature-icon">🫚</div><h3>Jamaican Black Castor Oil</h3><p>Strengthens hair shafts, reduces breakage, and promotes thickness by deeply moisturising the scalp.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🌹</div><h3>Rosemary Extract</h3><p>Clinically shown to be as effective as minoxidil for stimulating hair regrowth — without the side effects.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🫒</div><h3>Argan Oil</h3><p>Packed with vitamin E and fatty acids that repair damage, add shine, and prevent future breakage.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🌿</div><h3>Peppermint Oil</h3><p>Increases circulation to follicles, kickstarting dormant hair growth cycles for visibly fuller hair.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🌾</div><h3>Biotin Complex</h3><p>The essential B-vitamin that directly supports keratin production — the building block of every hair strand.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🧴</div><h3>Neem Oil</h3><p>Anti-fungal and anti-inflammatory properties soothe scalp conditions that hinder healthy hair growth.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="lg-section lg-how">
+      <div class="lg-container">
+        <h2 class="lg-section-title">Simple 3-Step Application</h2>
+        <div class="lg-steps">
+          <div class="lg-step"><div class="lg-step-num">01</div><h3>Part &amp; Apply</h3><p>Part your hair into sections and apply 8–10 drops directly onto your scalp.</p></div>
+          <div class="lg-step-arrow">→</div>
+          <div class="lg-step"><div class="lg-step-num">02</div><h3>Massage In</h3><p>Use fingertips to massage for 3–5 minutes. This boosts absorption and blood circulation.</p></div>
+          <div class="lg-step-arrow">→</div>
+          <div class="lg-step"><div class="lg-step-num">03</div><h3>Leave &amp; Repeat</h3><p>Leave overnight or for at least 2 hours. Use 3–4 times weekly for best results.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="lg-section lg-testimonials">
+      <div class="lg-container">
+        <h2 class="lg-section-title">Real Results from Real People</h2>
+        <p class="lg-section-sub">These are unsponsored reviews from our community.</p>
+        <div class="lg-testi-grid">
+          <div class="lg-testi-card">
+            <div class="lg-testi-stars">★★★★★</div>
+            <p class="lg-testi-text">"I've tried everything — serums, supplements, you name it. LuxeGrow is the only thing that actually worked. My hairline is filling back in after just 6 weeks!"</p>
+            <div class="lg-testi-author"><div class="lg-avatar">A</div><div><strong>Amara T.</strong><span>Verified Buyer · Lagos, NG</span></div></div>
+          </div>
+          <div class="lg-testi-card featured">
+            <div class="lg-testi-stars">★★★★★</div>
+            <p class="lg-testi-text">"My edges were practically gone from years of braids. After 8 weeks of LuxeGrow I have baby hairs growing in places I thought were dead forever. This oil is MAGIC."</p>
+            <div class="lg-testi-author"><div class="lg-avatar">J</div><div><strong>Jasmine W.</strong><span>Verified Buyer · Atlanta, USA</span></div></div>
+          </div>
+          <div class="lg-testi-card">
+            <div class="lg-testi-stars">★★★★★</div>
+            <p class="lg-testi-text">"Postpartum hair loss had me in tears. A friend recommended this and I'm so grateful. My hair is thicker than it was even before my pregnancy. Absolutely recommend!"</p>
+            <div class="lg-testi-author"><div class="lg-avatar">S</div><div><strong>Sofia M.</strong><span>Verified Buyer · London, UK</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="lg-section lg-pricing" id="lg-pricing">
+      <div class="lg-container">
+        <h2 class="lg-section-title">Choose Your LuxeGrow Package</h2>
+        <p class="lg-section-sub">The longer you commit, the more you save — and the better your results.</p>
+        <div class="lg-pricing-grid">
+          <div class="lg-price-card">
+            <div class="lg-price-label">Starter</div>
+            <div class="lg-price-bottles">1 Bottle</div>
+            <div class="lg-price-amount">$39.99</div>
+            <div class="lg-price-per">$39.99 / bottle</div>
+            <ul class="lg-price-perks"><li>✓ 60ml (1-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ 30-Day Money-Back Guarantee</li></ul>
+            <a href="#lg-order" class="lg-btn lg-btn-outline">Order 1 Bottle</a>
+          </div>
+          <div class="lg-price-card popular">
+            <div class="lg-price-badge">Most Popular</div>
+            <div class="lg-price-label">Growth Kit</div>
+            <div class="lg-price-bottles">3 Bottles</div>
+            <div class="lg-price-amount">$99.99</div>
+            <div class="lg-price-per"><s>$119.97</s> · Save $20</div>
+            <ul class="lg-price-perks"><li>✓ 3 × 60ml (3-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ Free Scalp Massager ($15 value)</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Shipping</li></ul>
+            <a href="#lg-order" class="lg-btn lg-btn-primary">Order 3 Bottles</a>
+          </div>
+          <div class="lg-price-card">
+            <div class="lg-price-label">Ultimate Bundle</div>
+            <div class="lg-price-bottles">6 Bottles</div>
+            <div class="lg-price-amount">$179.99</div>
+            <div class="lg-price-per"><s>$239.94</s> · Save $60</div>
+            <ul class="lg-price-perks"><li>✓ 6 × 60ml (6-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ Free Scalp Massager ($15 value)</li><li>✓ Priority Customer Support</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Express Shipping</li></ul>
+            <a href="#lg-order" class="lg-btn lg-btn-outline">Order 6 Bottles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="lg-section lg-guarantee">
+      <div class="lg-container">
+        <div class="lg-guarantee-inner">
+          <div class="lg-guarantee-badge">
+            <div class="lg-guarantee-icon">🛡️</div>
+            <div class="lg-guarantee-days">30</div>
+            <div class="lg-guarantee-label">Day Guarantee</div>
+          </div>
+          <div class="lg-guarantee-text">
+            <h2>Our Risk-Free Promise</h2>
+            <p>We're so confident LuxeGrow will transform your hair that we offer a full 30-day money-back guarantee. If you don't see results — for any reason — contact us and we'll refund every penny. No questions asked.</p>
+            <p><strong>You have absolutely nothing to lose and a full head of hair to gain.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="lg-section lg-faq">
+      <div class="lg-container">
+        <h2 class="lg-section-title">Frequently Asked Questions</h2>
+        <div class="lg-faq-list">
+          <details class="lg-faq-item"><summary>How long before I see results?</summary><p>Most customers notice reduced shedding within 2 weeks. Visible new growth typically appears between weeks 4–8. For maximum density and thickness, we recommend a full 90-day regimen.</p></details>
+          <details class="lg-faq-item"><summary>Is LuxeGrow safe for colour-treated or chemically processed hair?</summary><p>Yes! LuxeGrow is completely safe for all hair types including colour-treated, relaxed, natural, and heat-styled hair. Our formula is free of harsh chemicals that could strip colour or alter your hair's structure.</p></details>
+          <details class="lg-faq-item"><summary>Can men use LuxeGrow?</summary><p>Absolutely. LuxeGrow is formulated for all genders. It works effectively for both male and female pattern hair loss, receding hairlines, and general thinning.</p></details>
+          <details class="lg-faq-item"><summary>How long does one bottle last?</summary><p>One 60ml bottle lasts approximately 4–6 weeks with regular use (3–4 times per week). We recommend our 3-bottle bundle for a complete hair transformation cycle.</p></details>
+          <details class="lg-faq-item"><summary>Will it make my hair greasy?</summary><p>LuxeGrow is a lightweight, fast-absorbing formula. When used in the correct amount and massaged in properly, it absorbs without leaving a greasy residue. Always start with 8–10 drops and adjust to your preference.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER FORM -->
+    <section class="lg-section lg-order" id="lg-order">
+      <div class="lg-container">
+        <div class="lg-order-wrap">
+          <div class="lg-order-left">
+            <h2>Claim Your LuxeGrow Order</h2>
+            <p>Fill in your details below and we'll get your order shipped within 24 hours.</p>
+            <div class="lg-order-trust">
+              <span>🔒 Secure Checkout</span>
+              <span>📦 Fast Shipping</span>
+              <span>↩️ Easy Returns</span>
+            </div>
+          </div>
+          <div class="lg-order-right">
+            <form id="lg-form" class="lg-form" novalidate>
+              <div class="lg-form-row">
+                <div class="lg-form-group">
+                  <label for="lg-firstName">First Name *</label>
+                  <input type="text" id="lg-firstName" name="firstName" placeholder="Jane" required>
+                  <span class="lg-form-error" id="lg-firstNameErr"></span>
+                </div>
+                <div class="lg-form-group">
+                  <label for="lg-lastName">Last Name *</label>
+                  <input type="text" id="lg-lastName" name="lastName" placeholder="Doe" required>
+                  <span class="lg-form-error" id="lg-lastNameErr"></span>
+                </div>
+              </div>
+              <div class="lg-form-group">
+                <label for="lg-email">Email Address *</label>
+                <input type="email" id="lg-email" name="email" placeholder="jane@example.com" required>
+                <span class="lg-form-error" id="lg-emailErr"></span>
+              </div>
+              <div class="lg-form-group">
+                <label for="lg-phone">Phone Number *</label>
+                <input type="tel" id="lg-phone" name="phone" placeholder="+1 (555) 000-0000" required>
+                <span class="lg-form-error" id="lg-phoneErr"></span>
+              </div>
+              <div class="lg-form-group">
+                <label for="lg-address">Shipping Address *</label>
+                <input type="text" id="lg-address" name="address" placeholder="123 Main Street" required>
+                <span class="lg-form-error" id="lg-addressErr"></span>
+              </div>
+              <div class="lg-form-row">
+                <div class="lg-form-group">
+                  <label for="lg-city">City *</label>
+                  <input type="text" id="lg-city" name="city" placeholder="New York" required>
+                  <span class="lg-form-error" id="lg-cityErr"></span>
+                </div>
+                <div class="lg-form-group">
+                  <label for="lg-zip">ZIP / Postal Code *</label>
+                  <input type="text" id="lg-zip" name="zip" placeholder="10001" required>
+                  <span class="lg-form-error" id="lg-zipErr"></span>
+                </div>
+              </div>
+              <div class="lg-form-group">
+                <label for="lg-country">Country *</label>
+                <select id="lg-country" name="country" required>
+                  <option value="">Select your country</option>
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="CA">Canada</option>
+                  <option value="AU">Australia</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="GH">Ghana</option>
+                  <option value="OTHER">Other</option>
+                </select>
+                <span class="lg-form-error" id="lg-countryErr"></span>
+              </div>
+              <div class="lg-form-group">
+                <label for="lg-package">Select Your Package *</label>
+                <select id="lg-package" name="package" required>
+                  <option value="">Choose a package</option>
+                  <option value="starter">Starter — 1 Bottle · $39.99</option>
+                  <option value="growth">Growth Kit — 3 Bottles · $99.99 (Save $20)</option>
+                  <option value="ultimate">Ultimate Bundle — 6 Bottles · $179.99 (Save $60)</option>
+                </select>
+                <span class="lg-form-error" id="lg-packageErr"></span>
+              </div>
+              <div class="lg-form-group">
+                <label for="lg-notes">Special Instructions (optional)</label>
+                <textarea id="lg-notes" name="notes" rows="2" placeholder="Apartment number, delivery notes, etc."></textarea>
+              </div>
+              <button type="submit" class="lg-btn lg-btn-primary lg-btn-full" id="lg-submit-btn">
+                <span id="lg-btn-text">Place My Order Now 🌿</span>
+                <span id="lg-btn-loading" style="display:none">Processing...</span>
+              </button>
+              <p class="lg-form-disclaimer">By placing your order you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. Your information is 100% secure and never shared.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="lg-footer">
+      <div class="lg-container">
+        <div class="lg-footer-inner">
+          <div class="lg-footer-brand">
+            <div class="lg-footer-logo">LuxeGrow</div>
+            <p>Premium hair growth solutions crafted from nature's finest botanicals.</p>
+          </div>
+          <div class="lg-footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="lg-footer-bottom">
+          <p>© 2026 LuxeGrow Haircare. All rights reserved.</p>
+          <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /lg-main -->
+
+  <!-- THANK YOU PAGE (revealed in-page after form submit) -->
+  <div id="lg-thankyou">
+    <canvas id="lg-confetti"></canvas>
+    <div class="lg-ty-wrapper">
+      <div class="lg-ty-check">
+        <svg class="lg-ty-checkmark" viewBox="0 0 52 52">
+          <circle class="lg-ty-circle" cx="26" cy="26" r="25"/>
+          <path class="lg-ty-check-path" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+      </div>
+      <div class="lg-ty-content">
+        <p class="lg-ty-tag">Order Confirmed</p>
+        <h1 class="lg-ty-headline">Thank You, <span id="lg-ty-name">Beautiful!</span></h1>
+        <p class="lg-ty-sub">Your LuxeGrow Hair Growth Oil order has been received and is being prepared for shipment. You'll receive a confirmation email shortly with your order details and tracking information.</p>
+        <div class="lg-ty-order-box">
+          <h3>Order Summary</h3>
+          <div class="lg-ty-row"><span>Package</span><span id="lg-sum-pkg">—</span></div>
+          <div class="lg-ty-row"><span>Name</span><span id="lg-sum-name">—</span></div>
+          <div class="lg-ty-row"><span>Email</span><span id="lg-sum-email">—</span></div>
+          <div class="lg-ty-row"><span>Shipping to</span><span id="lg-sum-addr">—</span></div>
+          <div class="lg-ty-row total"><span>Estimated Delivery</span><span>5–7 Business Days</span></div>
+        </div>
+        <div class="lg-ty-steps">
+          <h3>What Happens Next?</h3>
+          <div class="lg-ty-step"><div class="lg-ty-step-num">1</div><div><strong>Order Confirmation Email</strong><p>Check your inbox (and spam folder) for your order confirmation within the next few minutes.</p></div></div>
+          <div class="lg-ty-step"><div class="lg-ty-step-num">2</div><div><strong>Packed with Care</strong><p>Our team carefully packs your LuxeGrow order within 24 hours of receipt.</p></div></div>
+          <div class="lg-ty-step"><div class="lg-ty-step-num">3</div><div><strong>Shipped &amp; Tracked</strong><p>You'll receive a tracking number via email once your order is on its way.</p></div></div>
+          <div class="lg-ty-step"><div class="lg-ty-step-num">4</div><div><strong>Start Your Hair Journey</strong><p>Apply 3–4 times per week and document your progress. Results begin in as little as 2 weeks!</p></div></div>
+        </div>
+        <div class="lg-ty-share">
+          <p>Love LuxeGrow already? Share the good news:</p>
+          <div class="lg-ty-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://luxegrow.com" target="_blank" rel="noopener" class="lg-btn lg-btn-social lg-btn-fb">Share on Facebook</a>
+            <a href="https://twitter.com/intent/tweet?text=I%20just%20ordered%20LuxeGrow%20Hair%20Growth%20Oil%20and%20I%20can%27t%20wait%20to%20see%20my%20results!%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="lg-btn lg-btn-social lg-btn-x">Share on X</a>
+          </div>
+        </div>
+        <button class="lg-btn lg-btn-outline" onclick="lgBackToPage()">← Back to LuxeGrow</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /lg-root -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+
+  /* ── Validators ─────────────────────────────────────────────── */
+  const rules = {
+    'lg-firstName': v => v.trim().length >= 2  ? '' : 'Please enter your first name.',
+    'lg-lastName':  v => v.trim().length >= 2  ? '' : 'Please enter your last name.',
+    'lg-email':     v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
+    'lg-phone':     v => v.trim().length >= 7  ? '' : 'Please enter a valid phone number.',
+    'lg-address':   v => v.trim().length >= 5  ? '' : 'Please enter your shipping address.',
+    'lg-city':      v => v.trim().length >= 2  ? '' : 'Please enter your city.',
+    'lg-zip':       v => v.trim().length >= 3  ? '' : 'Please enter your ZIP / postal code.',
+    'lg-country':   v => v !== ''              ? '' : 'Please select your country.',
+    'lg-package':   v => v !== ''              ? '' : 'Please select a package.',
+  };
+
+  const errIds = {
+    'lg-firstName': 'lg-firstNameErr', 'lg-lastName': 'lg-lastNameErr',
+    'lg-email': 'lg-emailErr', 'lg-phone': 'lg-phoneErr',
+    'lg-address': 'lg-addressErr', 'lg-city': 'lg-cityErr',
+    'lg-zip': 'lg-zipErr', 'lg-country': 'lg-countryErr',
+    'lg-package': 'lg-packageErr',
+  };
+
+  function validate(id) {
+    const el  = document.getElementById(id);
+    const err = rules[id](el.value);
+    el.classList.toggle('invalid', !!err);
+    document.getElementById(errIds[id]).textContent = err;
+    return err === '';
+  }
+
+  /* Live blur validation */
+  Object.keys(rules).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('blur', () => validate(id));
+  });
+
+  /* ── Form submit ────────────────────────────────────────────── */
+  document.getElementById('lg-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const ids   = Object.keys(rules);
+    const valid = ids.every(id => validate(id));
+    if (!valid) { document.getElementById(ids.find(id => !validate(id))).focus(); return; }
+
+    /* Loading state */
+    document.getElementById('lg-submit-btn').disabled    = true;
+    document.getElementById('lg-btn-text').style.display = 'none';
+    document.getElementById('lg-btn-loading').style.display = 'inline';
+
+    /* Collect data */
+    const pkgLabels = {
+      starter: '1 Bottle — Starter · $39.99',
+      growth:  '3 Bottles — Growth Kit · $99.99',
+      ultimate:'6 Bottles — Ultimate Bundle · $179.99',
+    };
+    const countryNames = {
+      US:'United States', GB:'United Kingdom', CA:'Canada',
+      AU:'Australia', NG:'Nigeria', ZA:'South Africa', GH:'Ghana', OTHER:'International',
+    };
+
+    const fn  = document.getElementById('lg-firstName').value.trim();
+    const ln  = document.getElementById('lg-lastName').value.trim();
+    const em  = document.getElementById('lg-email').value.trim();
+    const ph  = document.getElementById('lg-phone').value.trim();
+    const ad  = document.getElementById('lg-address').value.trim();
+    const ci  = document.getElementById('lg-city').value.trim();
+    const zp  = document.getElementById('lg-zip').value.trim();
+    const co  = document.getElementById('lg-country').value;
+    const pk  = document.getElementById('lg-package').value;
+
+    /* Populate thank-you screen */
+    document.getElementById('lg-ty-name').textContent    = fn + '!';
+    document.getElementById('lg-sum-name').textContent   = fn + ' ' + ln;
+    document.getElementById('lg-sum-email').textContent  = em;
+    document.getElementById('lg-sum-pkg').textContent    = pkgLabels[pk] || pk;
+    document.getElementById('lg-sum-addr').textContent   = ad + ', ' + ci + ', ' + zp + ', ' + (countryNames[co] || co);
+
+    /* Show thank-you after short delay */
+    setTimeout(function () {
+      document.getElementById('lg-main').classList.add('hidden');
+      const ty = document.getElementById('lg-thankyou');
+      ty.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      /* Animate checkmark */
+      setTimeout(function () {
+        document.querySelector('.lg-ty-circle').classList.add('animate');
+        document.querySelector('.lg-ty-check-path').classList.add('animate');
+      }, 100);
+
+      lgConfetti();
+    }, 1100);
+  });
+
+  /* ── Confetti ───────────────────────────────────────────────── */
+  function lgConfetti() {
+    const canvas = document.getElementById('lg-confetti');
+    const ctx    = canvas.getContext('2d');
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const colors = ['#C9A84C','#E8CC7A','#52B788','#FFFFFF','#A07832','#2D6A4F'];
+    const pieces = Array.from({ length: 120 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      w: Math.random() * 10 + 5,
+      h: Math.random() * 6 + 3,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      speed: Math.random() * 3 + 1.5,
+      angle: Math.random() * 360,
+      spin:  (Math.random() - 0.5) * 6,
+      drift: (Math.random() - 0.5) * 1.5,
+    }));
+
+    let frame = 0;
+    (function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pieces.forEach(function (p) {
+        ctx.save();
+        ctx.translate(p.x + p.w / 2, p.y + p.h / 2);
+        ctx.rotate(p.angle * Math.PI / 180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = Math.max(0, 1 - frame / 180);
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+        p.y += p.speed; p.x += p.drift; p.angle += p.spin;
+      });
+      frame++;
+      if (frame < 200) requestAnimationFrame(draw);
+      else ctx.clearRect(0, 0, canvas.width, canvas.height);
+    })();
+  }
+
+  /* ── Back button ────────────────────────────────────────────── */
+  window.lgBackToPage = function () {
+    document.getElementById('lg-thankyou').classList.remove('active');
+    document.getElementById('lg-main').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Reset form */
+    document.getElementById('lg-form').reset();
+    document.getElementById('lg-submit-btn').disabled = false;
+    document.getElementById('lg-btn-text').style.display    = 'inline';
+    document.getElementById('lg-btn-loading').style.display = 'none';
+    document.querySelectorAll('.lg-form-error').forEach(function (el) { el.textContent = ''; });
+    document.querySelectorAll('.invalid').forEach(function (el) { el.classList.remove('invalid'); });
+    document.querySelector('.lg-ty-circle').classList.remove('animate');
+    document.querySelector('.lg-ty-check-path').classList.remove('animate');
+  };
+
+})();
+</script>
