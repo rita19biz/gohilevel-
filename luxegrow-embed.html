@@ -1,5 +1,5 @@
 <!-- ================================================================
-     LUXEGROW HAIR GROWTH OIL — ALL-IN-ONE EMBED BLOCK
+     ADAURE ARGAN HAIR OIL — ALL-IN-ONE EMBED BLOCK
      Paste this entire block into your web builder's custom code area.
      Both the sales page and thank-you screen are included.
      No external files needed (Google Fonts loaded via CDN).
@@ -159,15 +159,24 @@
 #lg-root .lg-form-group label { font-size:.85rem; font-weight:600; color:var(--dark); text-transform:uppercase; letter-spacing:.5px; }
 #lg-root .lg-form-group input,
 #lg-root .lg-form-group select,
-#lg-root .lg-form-group textarea { padding:12px 16px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Inter',sans-serif; font-size:.95rem; color:var(--text); background:var(--cream); transition:border-color .2s,box-shadow .2s; outline:none; }
+#lg-root .lg-form-group textarea { padding:12px 16px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Inter',sans-serif; font-size:.95rem; color:var(--text); background:var(--cream); transition:border-color .2s,box-shadow .2s; outline:none; width:100%; }
 #lg-root .lg-form-group input:focus,
 #lg-root .lg-form-group select:focus,
 #lg-root .lg-form-group textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,.15); background:var(--white); }
 #lg-root .lg-form-group input.invalid,
-#lg-root .lg-form-group select.invalid { border-color:#e53e3e; box-shadow:0 0 0 3px rgba(229,62,62,.1); }
+#lg-root .lg-form-group select.invalid,
+#lg-root .lg-phone-input.invalid { border-color:#e53e3e; box-shadow:0 0 0 3px rgba(229,62,62,.1); }
 #lg-root .lg-form-error { font-size:.78rem; color:#e53e3e; min-height:16px; }
 #lg-root .lg-form-disclaimer { font-size:.75rem; color:var(--text-light); text-align:center; margin-top:14px; line-height:1.6; }
 #lg-root .lg-form-disclaimer a { color:var(--gold-dark); text-decoration:underline; }
+
+/* Phone field with dial code */
+#lg-root .lg-phone-wrap { display:flex; gap:8px; }
+#lg-root .lg-dial-select { flex:0 0 110px; padding:12px 8px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Inter',sans-serif; font-size:.88rem; color:var(--text); background:var(--cream); outline:none; transition:border-color .2s,box-shadow .2s; cursor:pointer; }
+#lg-root .lg-dial-select:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,.15); background:var(--white); }
+#lg-root .lg-phone-input { flex:1; padding:12px 16px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Inter',sans-serif; font-size:.95rem; color:var(--text); background:var(--cream); outline:none; transition:border-color .2s,box-shadow .2s; }
+#lg-root .lg-phone-input:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,.15); background:var(--white); }
+#lg-root .lg-dial-select.invalid { border-color:#e53e3e; }
 
 /* ── Footer ─────────────────────────────────────────────────────── */
 #lg-root .lg-footer { background:var(--dark); padding:60px 0 30px; border-top:1px solid rgba(201,168,76,.15); }
@@ -236,6 +245,7 @@
   #lg-root .lg-ty-content { padding:32px 20px; }
   #lg-root .lg-trust-inner { gap:20px; }
   #lg-root .lg-footer-inner { flex-direction:column; }
+  #lg-root .lg-dial-select { flex:0 0 95px; font-size:.8rem; }
 }
 </style>
 
@@ -244,7 +254,6 @@
 ═══════════════════════════════════════════════════════════════════ -->
 <div id="lg-root">
 
-  <!-- SALES PAGE -->
   <div class="lg-main" id="lg-main">
 
     <!-- HERO -->
@@ -254,16 +263,16 @@
         Stop Hiding Your Hair.<br>
         <span>Start Growing It Back.</span>
       </h1>
-      <p class="lg-hero-sub">LuxeGrow Hair Growth Oil is a 100% natural, clinically-inspired blend that reawakens dormant follicles, reduces shedding, and delivers visibly thicker hair in just 30 days — or your money back.</p>
-      <a href="#lg-order" class="lg-btn lg-btn-primary lg-btn-lg">Get My Bottle Now — $39.99</a>
-      <p class="lg-hero-guarantee">🔒 30-Day Money-Back Guarantee &nbsp;|&nbsp; Free Shipping Over $50</p>
+      <p class="lg-hero-sub">Adaure Argan Hair Oil is a 100% natural, clinically-inspired formula that reawakens dormant follicles, reduces shedding, and delivers visibly thicker hair in just 30 days — or your money back. Super lightweight, zero grease, absorbs instantly.</p>
+      <a href="#lg-order" class="lg-btn lg-btn-primary lg-btn-lg">Get My Bottle Now</a>
+      <p class="lg-hero-guarantee">🔒 30-Day Money-Back Guarantee &nbsp;|&nbsp; 🚚 Free Delivery Within 5km</p>
       <div class="lg-hero-image">
         <div class="lg-product-visual">
           <div class="lg-bottle">
             <div class="lg-bottle-label">
-              <div class="lg-label-brand">LuxeGrow</div>
-              <div class="lg-label-name">Hair Growth<br>Oil</div>
-              <div class="lg-label-size">60ml</div>
+              <div class="lg-label-brand">Adaure</div>
+              <div class="lg-label-name">Argan Hair<br>Oil</div>
+              <div class="lg-label-size">200ml</div>
             </div>
           </div>
           <div class="lg-glow"></div>
@@ -275,9 +284,9 @@
     <div class="lg-trust">
       <div class="lg-trust-inner">
         <div class="lg-trust-item"><span>🌿</span><span>100% Natural Ingredients</span></div>
-        <div class="lg-trust-item"><span>🧪</span><span>Dermatologist Approved</span></div>
+        <div class="lg-trust-item"><span>🧴</span><span>Ultra-Lightweight Formula</span></div>
         <div class="lg-trust-item"><span>🚫</span><span>No Parabens or Sulfates</span></div>
-        <div class="lg-trust-item"><span>♻️</span><span>Eco-Friendly Packaging</span></div>
+        <div class="lg-trust-item"><span>🚚</span><span>Free Delivery Within 5km</span></div>
       </div>
     </div>
 
@@ -289,10 +298,10 @@
         <div class="lg-pain-cards">
           <div class="lg-pain-card"><div class="lg-pain-icon">😔</div><p>Noticing more hair in the shower drain than ever before</p></div>
           <div class="lg-pain-card"><div class="lg-pain-icon">😞</div><p>Hair that grows slowly and breaks before reaching your desired length</p></div>
-          <div class="lg-pain-card"><div class="lg-pain-icon">😟</div><p>A thinning scalp that's robbing your confidence</p></div>
-          <div class="lg-pain-card"><div class="lg-pain-icon">😤</div><p>Wasted money on products that promised everything and delivered nothing</p></div>
+          <div class="lg-pain-card"><div class="lg-pain-icon">😟</div><p>A thinning scalp that's quietly robbing your confidence</p></div>
+          <div class="lg-pain-card"><div class="lg-pain-icon">😤</div><p>Wasted money on heavy, greasy products that promised everything and delivered nothing</p></div>
         </div>
-        <p class="lg-bridge">That changes today. LuxeGrow was formulated specifically to address the <strong>root cause</strong> of hair loss — not just the symptoms.</p>
+        <p class="lg-bridge">That changes today. Adaure Argan Hair Oil was formulated specifically to address the <strong>root cause</strong> of hair loss — not just the symptoms.</p>
       </div>
     </section>
 
@@ -300,11 +309,11 @@
     <section class="lg-section lg-features">
       <div class="lg-container">
         <h2 class="lg-section-title">The Science Behind Every Drop</h2>
-        <p class="lg-section-sub">Our proprietary blend of 12 potent botanicals works synergistically to nourish your scalp from within.</p>
+        <p class="lg-section-sub">Our proprietary blend of 12 potent botanicals works synergistically to nourish your scalp from within — and it's so lightweight you'll forget it's even there.</p>
         <div class="lg-features-grid">
-          <div class="lg-feature-card"><div class="lg-feature-icon">🫚</div><h3>Jamaican Black Castor Oil</h3><p>Strengthens hair shafts, reduces breakage, and promotes thickness by deeply moisturising the scalp.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🫒</div><h3>Pure Argan Oil</h3><p>Cold-pressed and ultra-refined for a feather-light texture that absorbs instantly — no residue, no heaviness, just pure nourishment.</p></div>
           <div class="lg-feature-card"><div class="lg-feature-icon">🌹</div><h3>Rosemary Extract</h3><p>Clinically shown to be as effective as minoxidil for stimulating hair regrowth — without the side effects.</p></div>
-          <div class="lg-feature-card"><div class="lg-feature-icon">🫒</div><h3>Argan Oil</h3><p>Packed with vitamin E and fatty acids that repair damage, add shine, and prevent future breakage.</p></div>
+          <div class="lg-feature-card"><div class="lg-feature-icon">🫚</div><h3>Jamaican Black Castor Oil</h3><p>Strengthens hair shafts, reduces breakage, and promotes thickness by deeply moisturising the scalp.</p></div>
           <div class="lg-feature-card"><div class="lg-feature-icon">🌿</div><h3>Peppermint Oil</h3><p>Increases circulation to follicles, kickstarting dormant hair growth cycles for visibly fuller hair.</p></div>
           <div class="lg-feature-card"><div class="lg-feature-icon">🌾</div><h3>Biotin Complex</h3><p>The essential B-vitamin that directly supports keratin production — the building block of every hair strand.</p></div>
           <div class="lg-feature-card"><div class="lg-feature-icon">🧴</div><h3>Neem Oil</h3><p>Anti-fungal and anti-inflammatory properties soothe scalp conditions that hinder healthy hair growth.</p></div>
@@ -316,12 +325,13 @@
     <section class="lg-section lg-how">
       <div class="lg-container">
         <h2 class="lg-section-title">Simple 3-Step Application</h2>
+        <p class="lg-section-sub">So lightweight, so easy. Takes less than 2 minutes.</p>
         <div class="lg-steps">
-          <div class="lg-step"><div class="lg-step-num">01</div><h3>Part &amp; Apply</h3><p>Part your hair into sections and apply 8–10 drops directly onto your scalp.</p></div>
+          <div class="lg-step"><div class="lg-step-num">01</div><h3>Part &amp; Apply</h3><p>Part your hair into sections and apply a few drops directly onto your scalp morning and night.</p></div>
           <div class="lg-step-arrow">→</div>
-          <div class="lg-step"><div class="lg-step-num">02</div><h3>Massage In</h3><p>Use fingertips to massage for 3–5 minutes. This boosts absorption and blood circulation.</p></div>
+          <div class="lg-step"><div class="lg-step-num">02</div><h3>Massage In</h3><p>Use your fingertips to massage gently for just 1 minute to boost absorption and circulation.</p></div>
           <div class="lg-step-arrow">→</div>
-          <div class="lg-step"><div class="lg-step-num">03</div><h3>Leave &amp; Repeat</h3><p>Leave overnight or for at least 2 hours. Use 3–4 times weekly for best results.</p></div>
+          <div class="lg-step"><div class="lg-step-num">03</div><h3>Style &amp; Go</h3><p>Use twice daily — morning and night — for best results. The ultra-light formula means no greasy feel, ever.</p></div>
         </div>
       </div>
     </section>
@@ -334,18 +344,18 @@
         <div class="lg-testi-grid">
           <div class="lg-testi-card">
             <div class="lg-testi-stars">★★★★★</div>
-            <p class="lg-testi-text">"I've tried everything — serums, supplements, you name it. LuxeGrow is the only thing that actually worked. My hairline is filling back in after just 6 weeks!"</p>
+            <p class="lg-testi-text">"I've tried everything — serums, supplements, you name it. Adaure is the only thing that actually worked. My hairline is filling back in after just 6 weeks!"</p>
             <div class="lg-testi-author"><div class="lg-avatar">A</div><div><strong>Amara T.</strong><span>Verified Buyer · Lagos, NG</span></div></div>
           </div>
           <div class="lg-testi-card featured">
             <div class="lg-testi-stars">★★★★★</div>
-            <p class="lg-testi-text">"My edges were practically gone from years of braids. After 8 weeks of LuxeGrow I have baby hairs growing in places I thought were dead forever. This oil is MAGIC."</p>
-            <div class="lg-testi-author"><div class="lg-avatar">J</div><div><strong>Jasmine W.</strong><span>Verified Buyer · Atlanta, USA</span></div></div>
+            <p class="lg-testi-text">"My edges were practically gone from years of braids. After 8 weeks of Adaure Argan Hair Oil I have baby hairs growing in places I thought were dead forever. And it's so light — I can't even feel it on my scalp!"</p>
+            <div class="lg-testi-author"><div class="lg-avatar">J</div><div><strong>Jasmine W.</strong><span>Verified Buyer · Abuja, NG</span></div></div>
           </div>
           <div class="lg-testi-card">
             <div class="lg-testi-stars">★★★★★</div>
-            <p class="lg-testi-text">"Postpartum hair loss had me in tears. A friend recommended this and I'm so grateful. My hair is thicker than it was even before my pregnancy. Absolutely recommend!"</p>
-            <div class="lg-testi-author"><div class="lg-avatar">S</div><div><strong>Sofia M.</strong><span>Verified Buyer · London, UK</span></div></div>
+            <p class="lg-testi-text">"Postpartum hair loss had me in tears. A friend recommended Adaure and I'm so grateful. My hair is thicker than it was even before my pregnancy. The oil is feather-light — I use it every single day!"</p>
+            <div class="lg-testi-author"><div class="lg-avatar">S</div><div><strong>Sofia M.</strong><span>Verified Buyer · Port Harcourt, NG</span></div></div>
           </div>
         </div>
       </div>
@@ -354,7 +364,7 @@
     <!-- PRICING -->
     <section class="lg-section lg-pricing" id="lg-pricing">
       <div class="lg-container">
-        <h2 class="lg-section-title">Choose Your LuxeGrow Package</h2>
+        <h2 class="lg-section-title">Choose Your Adaure Package</h2>
         <p class="lg-section-sub">The longer you commit, the more you save — and the better your results.</p>
         <div class="lg-pricing-grid">
           <div class="lg-price-card">
@@ -362,7 +372,7 @@
             <div class="lg-price-bottles">1 Bottle</div>
             <div class="lg-price-amount">$39.99</div>
             <div class="lg-price-per">$39.99 / bottle</div>
-            <ul class="lg-price-perks"><li>✓ 60ml (1-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ 30-Day Money-Back Guarantee</li></ul>
+            <ul class="lg-price-perks"><li>✓ 200ml (1-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Delivery Within 5km</li></ul>
             <a href="#lg-order" class="lg-btn lg-btn-outline">Order 1 Bottle</a>
           </div>
           <div class="lg-price-card popular">
@@ -371,7 +381,7 @@
             <div class="lg-price-bottles">3 Bottles</div>
             <div class="lg-price-amount">$99.99</div>
             <div class="lg-price-per"><s>$119.97</s> · Save $20</div>
-            <ul class="lg-price-perks"><li>✓ 3 × 60ml (3-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ Free Scalp Massager ($15 value)</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Shipping</li></ul>
+            <ul class="lg-price-perks"><li>✓ 3 × 200ml (3-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ Free Scalp Massager ($15 value)</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Delivery Within 5km</li></ul>
             <a href="#lg-order" class="lg-btn lg-btn-primary">Order 3 Bottles</a>
           </div>
           <div class="lg-price-card">
@@ -379,7 +389,7 @@
             <div class="lg-price-bottles">6 Bottles</div>
             <div class="lg-price-amount">$179.99</div>
             <div class="lg-price-per"><s>$239.94</s> · Save $60</div>
-            <ul class="lg-price-perks"><li>✓ 6 × 60ml (6-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ Free Scalp Massager ($15 value)</li><li>✓ Priority Customer Support</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Express Shipping</li></ul>
+            <ul class="lg-price-perks"><li>✓ 6 × 200ml (6-month supply)</li><li>✓ Free e-Guide: Haircare Routine</li><li>✓ Free Scalp Massager ($15 value)</li><li>✓ Priority Customer Support</li><li>✓ 30-Day Money-Back Guarantee</li><li>✓ Free Delivery Within 5km</li></ul>
             <a href="#lg-order" class="lg-btn lg-btn-outline">Order 6 Bottles</a>
           </div>
         </div>
@@ -397,7 +407,7 @@
           </div>
           <div class="lg-guarantee-text">
             <h2>Our Risk-Free Promise</h2>
-            <p>We're so confident LuxeGrow will transform your hair that we offer a full 30-day money-back guarantee. If you don't see results — for any reason — contact us and we'll refund every penny. No questions asked.</p>
+            <p>We're so confident Adaure Argan Hair Oil will transform your hair that we offer a full 30-day money-back guarantee. If you don't see results — for any reason — contact us and we'll refund every penny. No questions asked.</p>
             <p><strong>You have absolutely nothing to lose and a full head of hair to gain.</strong></p>
           </div>
         </div>
@@ -409,11 +419,11 @@
       <div class="lg-container">
         <h2 class="lg-section-title">Frequently Asked Questions</h2>
         <div class="lg-faq-list">
-          <details class="lg-faq-item"><summary>How long before I see results?</summary><p>Most customers notice reduced shedding within 2 weeks. Visible new growth typically appears between weeks 4–8. For maximum density and thickness, we recommend a full 90-day regimen.</p></details>
-          <details class="lg-faq-item"><summary>Is LuxeGrow safe for colour-treated or chemically processed hair?</summary><p>Yes! LuxeGrow is completely safe for all hair types including colour-treated, relaxed, natural, and heat-styled hair. Our formula is free of harsh chemicals that could strip colour or alter your hair's structure.</p></details>
-          <details class="lg-faq-item"><summary>Can men use LuxeGrow?</summary><p>Absolutely. LuxeGrow is formulated for all genders. It works effectively for both male and female pattern hair loss, receding hairlines, and general thinning.</p></details>
-          <details class="lg-faq-item"><summary>How long does one bottle last?</summary><p>One 60ml bottle lasts approximately 4–6 weeks with regular use (3–4 times per week). We recommend our 3-bottle bundle for a complete hair transformation cycle.</p></details>
-          <details class="lg-faq-item"><summary>Will it make my hair greasy?</summary><p>LuxeGrow is a lightweight, fast-absorbing formula. When used in the correct amount and massaged in properly, it absorbs without leaving a greasy residue. Always start with 8–10 drops and adjust to your preference.</p></details>
+          <details class="lg-faq-item"><summary>How long before I see results?</summary><p>Most customers notice reduced shedding within 2 weeks. Visible new growth typically appears between weeks 4–8. For maximum density and thickness, we recommend a full 90-day regimen using the oil twice daily.</p></details>
+          <details class="lg-faq-item"><summary>Is the oil really lightweight? Won't it feel greasy?</summary><p>Absolutely not! Adaure Argan Hair Oil is ultra-lightweight and fast-absorbing. Apply a few drops, massage for just 1 minute, and it sinks in completely — zero grease, zero residue. That's the magic of pure argan oil.</p></details>
+          <details class="lg-faq-item"><summary>Is it safe for colour-treated or chemically processed hair?</summary><p>Yes! Adaure is completely safe for all hair types including colour-treated, relaxed, natural, and heat-styled hair. Our formula is free of harsh chemicals that could strip colour or alter your hair's structure.</p></details>
+          <details class="lg-faq-item"><summary>Can men use Adaure Argan Hair Oil?</summary><p>Absolutely. The oil is formulated for all genders and works effectively for both male and female pattern hair loss, receding hairlines, and general thinning.</p></details>
+          <details class="lg-faq-item"><summary>How long does one bottle last?</summary><p>One 200ml bottle lasts approximately 6–8 weeks with regular twice-daily use. We recommend our 3-bottle bundle for a complete hair transformation cycle.</p></details>
         </div>
       </div>
     </section>
@@ -423,16 +433,18 @@
       <div class="lg-container">
         <div class="lg-order-wrap">
           <div class="lg-order-left">
-            <h2>Claim Your LuxeGrow Order</h2>
+            <h2>Claim Your Adaure Order</h2>
             <p>Fill in your details below and we'll get your order shipped within 24 hours.</p>
             <div class="lg-order-trust">
-              <span>🔒 Secure Checkout</span>
-              <span>📦 Fast Shipping</span>
-              <span>↩️ Easy Returns</span>
+              <span>🔒 Secure &amp; Private</span>
+              <span>🚚 Free Delivery Within 5km</span>
+              <span>↩️ 30-Day Money-Back Guarantee</span>
             </div>
           </div>
           <div class="lg-order-right">
             <form id="lg-form" class="lg-form" novalidate>
+
+              <!-- Name row -->
               <div class="lg-form-row">
                 <div class="lg-form-group">
                   <label for="lg-firstName">First Name *</label>
@@ -445,62 +457,126 @@
                   <span class="lg-form-error" id="lg-lastNameErr"></span>
                 </div>
               </div>
+
+              <!-- Email -->
               <div class="lg-form-group">
                 <label for="lg-email">Email Address *</label>
                 <input type="email" id="lg-email" name="email" placeholder="jane@example.com" required>
                 <span class="lg-form-error" id="lg-emailErr"></span>
               </div>
+
+              <!-- Phone with country code -->
               <div class="lg-form-group">
-                <label for="lg-phone">Phone Number *</label>
-                <input type="tel" id="lg-phone" name="phone" placeholder="+1 (555) 000-0000" required>
+                <label>Phone Number *</label>
+                <div class="lg-phone-wrap">
+                  <select id="lg-phoneDial" class="lg-dial-select" aria-label="Phone country code">
+                    <option value="+234" selected>🇳🇬 +234</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1-CA">🇨🇦 +1</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+233">🇬🇭 +233</option>
+                    <option value="+27">🇿🇦 +27</option>
+                    <option value="+254">🇰🇪 +254</option>
+                    <option value="+256">🇺🇬 +256</option>
+                    <option value="+255">🇹🇿 +255</option>
+                    <option value="+237">🇨🇲 +237</option>
+                    <option value="+225">🇨🇮 +225</option>
+                    <option value="+221">🇸🇳 +221</option>
+                    <option value="+212">🇲🇦 +212</option>
+                    <option value="+20">🇪🇬 +20</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+971">🇦🇪 +971</option>
+                  </select>
+                  <input type="tel" id="lg-phone" class="lg-phone-input" name="phone" placeholder="0801 234 5678" required>
+                </div>
                 <span class="lg-form-error" id="lg-phoneErr"></span>
               </div>
+
+              <!-- WhatsApp with country code -->
+              <div class="lg-form-group">
+                <label>WhatsApp Number *</label>
+                <div class="lg-phone-wrap">
+                  <select id="lg-waDial" class="lg-dial-select" aria-label="WhatsApp country code">
+                    <option value="+234" selected>🇳🇬 +234</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1-CA">🇨🇦 +1</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+233">🇬🇭 +233</option>
+                    <option value="+27">🇿🇦 +27</option>
+                    <option value="+254">🇰🇪 +254</option>
+                    <option value="+256">🇺🇬 +256</option>
+                    <option value="+255">🇹🇿 +255</option>
+                    <option value="+237">🇨🇲 +237</option>
+                    <option value="+225">🇨🇮 +225</option>
+                    <option value="+221">🇸🇳 +221</option>
+                    <option value="+212">🇲🇦 +212</option>
+                    <option value="+20">🇪🇬 +20</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+971">🇦🇪 +971</option>
+                  </select>
+                  <input type="tel" id="lg-whatsapp" class="lg-phone-input" name="whatsapp" placeholder="0801 234 5678" required>
+                </div>
+                <span class="lg-form-error" id="lg-whatsappErr"></span>
+              </div>
+
+              <!-- Address -->
               <div class="lg-form-group">
                 <label for="lg-address">Shipping Address *</label>
                 <input type="text" id="lg-address" name="address" placeholder="123 Main Street" required>
                 <span class="lg-form-error" id="lg-addressErr"></span>
               </div>
+
+              <!-- City & Country row -->
               <div class="lg-form-row">
                 <div class="lg-form-group">
                   <label for="lg-city">City *</label>
-                  <input type="text" id="lg-city" name="city" placeholder="New York" required>
+                  <input type="text" id="lg-city" name="city" placeholder="Lagos" required>
                   <span class="lg-form-error" id="lg-cityErr"></span>
                 </div>
                 <div class="lg-form-group">
-                  <label for="lg-zip">ZIP / Postal Code *</label>
-                  <input type="text" id="lg-zip" name="zip" placeholder="10001" required>
-                  <span class="lg-form-error" id="lg-zipErr"></span>
+                  <label for="lg-country">Country *</label>
+                  <select id="lg-country" name="country" required>
+                    <option value="">Select country</option>
+                    <option value="NG" selected>Nigeria</option>
+                    <option value="US">United States</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="GH">Ghana</option>
+                    <option value="KE">Kenya</option>
+                    <option value="OTHER">Other</option>
+                  </select>
+                  <span class="lg-form-error" id="lg-countryErr"></span>
                 </div>
               </div>
-              <div class="lg-form-group">
-                <label for="lg-country">Country *</label>
-                <select id="lg-country" name="country" required>
-                  <option value="">Select your country</option>
-                  <option value="US">United States</option>
-                  <option value="GB">United Kingdom</option>
-                  <option value="CA">Canada</option>
-                  <option value="AU">Australia</option>
-                  <option value="NG">Nigeria</option>
-                  <option value="ZA">South Africa</option>
-                  <option value="GH">Ghana</option>
-                  <option value="OTHER">Other</option>
-                </select>
-                <span class="lg-form-error" id="lg-countryErr"></span>
-              </div>
+
+              <!-- Package -->
               <div class="lg-form-group">
                 <label for="lg-package">Select Your Package *</label>
                 <select id="lg-package" name="package" required>
                   <option value="">Choose a package</option>
-                  <option value="starter">Starter — 1 Bottle · $39.99</option>
+                  <option value="starter">Starter — 1 Bottle (200ml) · $39.99</option>
                   <option value="growth">Growth Kit — 3 Bottles · $99.99 (Save $20)</option>
                   <option value="ultimate">Ultimate Bundle — 6 Bottles · $179.99 (Save $60)</option>
                 </select>
                 <span class="lg-form-error" id="lg-packageErr"></span>
               </div>
+
+              <!-- Delivery Note -->
               <div class="lg-form-group">
-                <label for="lg-notes">Special Instructions (optional)</label>
-                <textarea id="lg-notes" name="notes" rows="2" placeholder="Apartment number, delivery notes, etc."></textarea>
+                <label for="lg-delivery">Delivery Note (optional)</label>
+                <textarea id="lg-delivery" name="deliveryNote" rows="2" placeholder="Apartment number, gate code, landmark near your address, best time for delivery..."></textarea>
               </div>
+
+              <!-- Current Hair Issue -->
+              <div class="lg-form-group">
+                <label for="lg-hairIssue">Current Hair Issue (optional)</label>
+                <textarea id="lg-hairIssue" name="hairIssue" rows="2" placeholder="e.g. Hair thinning at the crown, receding hairline, postpartum shedding, slow growth..."></textarea>
+              </div>
+
               <button type="submit" class="lg-btn lg-btn-primary lg-btn-full" id="lg-submit-btn">
                 <span id="lg-btn-text">Place My Order Now 🌿</span>
                 <span id="lg-btn-loading" style="display:none">Processing...</span>
@@ -517,8 +593,8 @@
       <div class="lg-container">
         <div class="lg-footer-inner">
           <div class="lg-footer-brand">
-            <div class="lg-footer-logo">LuxeGrow</div>
-            <p>Premium hair growth solutions crafted from nature's finest botanicals.</p>
+            <div class="lg-footer-logo">Adaure</div>
+            <p>Premium argan hair oil crafted from nature's finest botanicals for all hair types.</p>
           </div>
           <div class="lg-footer-links">
             <a href="#">Privacy Policy</a>
@@ -528,7 +604,7 @@
           </div>
         </div>
         <div class="lg-footer-bottom">
-          <p>© 2026 LuxeGrow Haircare. All rights reserved.</p>
+          <p>© 2026 Adaure Haircare. All rights reserved.</p>
           <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
         </div>
       </div>
@@ -536,7 +612,7 @@
 
   </div><!-- /lg-main -->
 
-  <!-- THANK YOU PAGE (revealed in-page after form submit) -->
+  <!-- THANK YOU PAGE -->
   <div id="lg-thankyou">
     <canvas id="lg-confetti"></canvas>
     <div class="lg-ty-wrapper">
@@ -549,30 +625,59 @@
       <div class="lg-ty-content">
         <p class="lg-ty-tag">Order Confirmed</p>
         <h1 class="lg-ty-headline">Thank You, <span id="lg-ty-name">Beautiful!</span></h1>
-        <p class="lg-ty-sub">Your LuxeGrow Hair Growth Oil order has been received and is being prepared for shipment. You'll receive a confirmation email shortly with your order details and tracking information.</p>
+        <p class="lg-ty-sub">Your Adaure Argan Hair Oil order has been received and is being prepared for shipment. You'll receive a confirmation via email or WhatsApp shortly with your order details.</p>
+
         <div class="lg-ty-order-box">
           <h3>Order Summary</h3>
           <div class="lg-ty-row"><span>Package</span><span id="lg-sum-pkg">—</span></div>
           <div class="lg-ty-row"><span>Name</span><span id="lg-sum-name">—</span></div>
           <div class="lg-ty-row"><span>Email</span><span id="lg-sum-email">—</span></div>
+          <div class="lg-ty-row"><span>WhatsApp</span><span id="lg-sum-wa">—</span></div>
           <div class="lg-ty-row"><span>Shipping to</span><span id="lg-sum-addr">—</span></div>
-          <div class="lg-ty-row total"><span>Estimated Delivery</span><span>5–7 Business Days</span></div>
+          <div class="lg-ty-row total"><span>Estimated Delivery</span><span>1–3 Business Days</span></div>
         </div>
+
         <div class="lg-ty-steps">
           <h3>What Happens Next?</h3>
-          <div class="lg-ty-step"><div class="lg-ty-step-num">1</div><div><strong>Order Confirmation Email</strong><p>Check your inbox (and spam folder) for your order confirmation within the next few minutes.</p></div></div>
-          <div class="lg-ty-step"><div class="lg-ty-step-num">2</div><div><strong>Packed with Care</strong><p>Our team carefully packs your LuxeGrow order within 24 hours of receipt.</p></div></div>
-          <div class="lg-ty-step"><div class="lg-ty-step-num">3</div><div><strong>Shipped &amp; Tracked</strong><p>You'll receive a tracking number via email once your order is on its way.</p></div></div>
-          <div class="lg-ty-step"><div class="lg-ty-step-num">4</div><div><strong>Start Your Hair Journey</strong><p>Apply 3–4 times per week and document your progress. Results begin in as little as 2 weeks!</p></div></div>
-        </div>
-        <div class="lg-ty-share">
-          <p>Love LuxeGrow already? Share the good news:</p>
-          <div class="lg-ty-share-btns">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://luxegrow.com" target="_blank" rel="noopener" class="lg-btn lg-btn-social lg-btn-fb">Share on Facebook</a>
-            <a href="https://twitter.com/intent/tweet?text=I%20just%20ordered%20LuxeGrow%20Hair%20Growth%20Oil%20and%20I%20can%27t%20wait%20to%20see%20my%20results!%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="lg-btn lg-btn-social lg-btn-x">Share on X</a>
+          <div class="lg-ty-step">
+            <div class="lg-ty-step-num">1</div>
+            <div>
+              <strong>Order Confirmation Email or WhatsApp Message</strong>
+              <p>Check your inbox (and spam folder) or WhatsApp for your order confirmation within the next few minutes.</p>
+            </div>
+          </div>
+          <div class="lg-ty-step">
+            <div class="lg-ty-step-num">2</div>
+            <div>
+              <strong>Packed with Care</strong>
+              <p>Our team carefully packs your Adaure Argan Hair Oil order within 24 hours of receipt.</p>
+            </div>
+          </div>
+          <div class="lg-ty-step">
+            <div class="lg-ty-step-num">3</div>
+            <div>
+              <strong>Shipped &amp; Tracked</strong>
+              <p>You'll receive a tracking number via email or WhatsApp once your order is on its way.</p>
+            </div>
+          </div>
+          <div class="lg-ty-step">
+            <div class="lg-ty-step-num">4</div>
+            <div>
+              <strong>Start Your Hair Journey</strong>
+              <p>Apply twice daily — morning and night — massage for 1 minute, and document your progress. Results begin in as little as 2 weeks!</p>
+            </div>
           </div>
         </div>
-        <button class="lg-btn lg-btn-outline" onclick="lgBackToPage()">← Back to LuxeGrow</button>
+
+        <div class="lg-ty-share">
+          <p>Love Adaure already? Share the good news:</p>
+          <div class="lg-ty-share-btns">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://adaure.com" target="_blank" rel="noopener" class="lg-btn lg-btn-social lg-btn-fb">Share on Facebook</a>
+            <a href="https://twitter.com/intent/tweet?text=I%20just%20ordered%20Adaure%20Argan%20Hair%20Oil%20and%20I%20can%27t%20wait%20to%20see%20my%20results!%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="lg-btn lg-btn-social lg-btn-x">Share on X</a>
+          </div>
+        </div>
+
+        <button class="lg-btn lg-btn-outline" onclick="lgBackToPage()">← Back to Adaure</button>
       </div>
     </div>
   </div>
@@ -590,20 +695,24 @@
     'lg-firstName': v => v.trim().length >= 2  ? '' : 'Please enter your first name.',
     'lg-lastName':  v => v.trim().length >= 2  ? '' : 'Please enter your last name.',
     'lg-email':     v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
-    'lg-phone':     v => v.trim().length >= 7  ? '' : 'Please enter a valid phone number.',
+    'lg-phone':     v => v.trim().length >= 6  ? '' : 'Please enter a valid phone number.',
+    'lg-whatsapp':  v => v.trim().length >= 6  ? '' : 'Please enter a valid WhatsApp number.',
     'lg-address':   v => v.trim().length >= 5  ? '' : 'Please enter your shipping address.',
     'lg-city':      v => v.trim().length >= 2  ? '' : 'Please enter your city.',
-    'lg-zip':       v => v.trim().length >= 3  ? '' : 'Please enter your ZIP / postal code.',
     'lg-country':   v => v !== ''              ? '' : 'Please select your country.',
     'lg-package':   v => v !== ''              ? '' : 'Please select a package.',
   };
 
   const errIds = {
-    'lg-firstName': 'lg-firstNameErr', 'lg-lastName': 'lg-lastNameErr',
-    'lg-email': 'lg-emailErr', 'lg-phone': 'lg-phoneErr',
-    'lg-address': 'lg-addressErr', 'lg-city': 'lg-cityErr',
-    'lg-zip': 'lg-zipErr', 'lg-country': 'lg-countryErr',
-    'lg-package': 'lg-packageErr',
+    'lg-firstName': 'lg-firstNameErr',
+    'lg-lastName':  'lg-lastNameErr',
+    'lg-email':     'lg-emailErr',
+    'lg-phone':     'lg-phoneErr',
+    'lg-whatsapp':  'lg-whatsappErr',
+    'lg-address':   'lg-addressErr',
+    'lg-city':      'lg-cityErr',
+    'lg-country':   'lg-countryErr',
+    'lg-package':   'lg-packageErr',
   };
 
   function validate(id) {
@@ -625,49 +734,54 @@
     e.preventDefault();
     const ids   = Object.keys(rules);
     const valid = ids.every(id => validate(id));
-    if (!valid) { document.getElementById(ids.find(id => !validate(id))).focus(); return; }
+    if (!valid) {
+      const firstBad = ids.find(id => !validate(id));
+      if (firstBad) document.getElementById(firstBad).focus();
+      return;
+    }
 
     /* Loading state */
-    document.getElementById('lg-submit-btn').disabled    = true;
-    document.getElementById('lg-btn-text').style.display = 'none';
+    document.getElementById('lg-submit-btn').disabled       = true;
+    document.getElementById('lg-btn-text').style.display    = 'none';
     document.getElementById('lg-btn-loading').style.display = 'inline';
 
     /* Collect data */
     const pkgLabels = {
-      starter: '1 Bottle — Starter · $39.99',
-      growth:  '3 Bottles — Growth Kit · $99.99',
-      ultimate:'6 Bottles — Ultimate Bundle · $179.99',
+      starter:  '1 Bottle (200ml) — Starter · $39.99',
+      growth:   '3 Bottles — Growth Kit · $99.99',
+      ultimate: '6 Bottles — Ultimate Bundle · $179.99',
     };
     const countryNames = {
-      US:'United States', GB:'United Kingdom', CA:'Canada',
-      AU:'Australia', NG:'Nigeria', ZA:'South Africa', GH:'Ghana', OTHER:'International',
+      NG:'Nigeria', US:'United States', GB:'United Kingdom',
+      CA:'Canada', AU:'Australia', ZA:'South Africa',
+      GH:'Ghana', KE:'Kenya', OTHER:'International',
     };
 
-    const fn  = document.getElementById('lg-firstName').value.trim();
-    const ln  = document.getElementById('lg-lastName').value.trim();
-    const em  = document.getElementById('lg-email').value.trim();
-    const ph  = document.getElementById('lg-phone').value.trim();
-    const ad  = document.getElementById('lg-address').value.trim();
-    const ci  = document.getElementById('lg-city').value.trim();
-    const zp  = document.getElementById('lg-zip').value.trim();
-    const co  = document.getElementById('lg-country').value;
-    const pk  = document.getElementById('lg-package').value;
+    const fn      = document.getElementById('lg-firstName').value.trim();
+    const ln      = document.getElementById('lg-lastName').value.trim();
+    const em      = document.getElementById('lg-email').value.trim();
+    const ad      = document.getElementById('lg-address').value.trim();
+    const ci      = document.getElementById('lg-city').value.trim();
+    const co      = document.getElementById('lg-country').value;
+    const pk      = document.getElementById('lg-package').value;
+    const phone   = document.getElementById('lg-phoneDial').value.replace('-CA','') + ' ' + document.getElementById('lg-phone').value.trim();
+    const wa      = document.getElementById('lg-waDial').value.replace('-CA','') + ' ' + document.getElementById('lg-whatsapp').value.trim();
 
     /* Populate thank-you screen */
     document.getElementById('lg-ty-name').textContent    = fn + '!';
     document.getElementById('lg-sum-name').textContent   = fn + ' ' + ln;
     document.getElementById('lg-sum-email').textContent  = em;
+    document.getElementById('lg-sum-wa').textContent     = wa;
     document.getElementById('lg-sum-pkg').textContent    = pkgLabels[pk] || pk;
-    document.getElementById('lg-sum-addr').textContent   = ad + ', ' + ci + ', ' + zp + ', ' + (countryNames[co] || co);
+    document.getElementById('lg-sum-addr').textContent   = ad + ', ' + ci + ', ' + (countryNames[co] || co);
 
-    /* Show thank-you after short delay */
+    /* Show thank-you */
     setTimeout(function () {
       document.getElementById('lg-main').classList.add('hidden');
       const ty = document.getElementById('lg-thankyou');
       ty.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      /* Animate checkmark */
       setTimeout(function () {
         document.querySelector('.lg-ty-circle').classList.add('animate');
         document.querySelector('.lg-ty-check-path').classList.add('animate');
@@ -686,10 +800,10 @@
 
     const colors = ['#C9A84C','#E8CC7A','#52B788','#FFFFFF','#A07832','#2D6A4F'];
     const pieces = Array.from({ length: 120 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height - canvas.height,
-      w: Math.random() * 10 + 5,
-      h: Math.random() * 6 + 3,
+      x:     Math.random() * canvas.width,
+      y:     Math.random() * canvas.height - canvas.height,
+      w:     Math.random() * 10 + 5,
+      h:     Math.random() * 6 + 3,
       color: colors[Math.floor(Math.random() * colors.length)],
       speed: Math.random() * 3 + 1.5,
       angle: Math.random() * 360,
@@ -704,7 +818,7 @@
         ctx.save();
         ctx.translate(p.x + p.w / 2, p.y + p.h / 2);
         ctx.rotate(p.angle * Math.PI / 180);
-        ctx.fillStyle = p.color;
+        ctx.fillStyle   = p.color;
         ctx.globalAlpha = Math.max(0, 1 - frame / 180);
         ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
         ctx.restore();
@@ -721,9 +835,8 @@
     document.getElementById('lg-thankyou').classList.remove('active');
     document.getElementById('lg-main').classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    /* Reset form */
     document.getElementById('lg-form').reset();
-    document.getElementById('lg-submit-btn').disabled = false;
+    document.getElementById('lg-submit-btn').disabled       = false;
     document.getElementById('lg-btn-text').style.display    = 'inline';
     document.getElementById('lg-btn-loading').style.display = 'none';
     document.querySelectorAll('.lg-form-error').forEach(function (el) { el.textContent = ''; });
