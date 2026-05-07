@@ -3,406 +3,578 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LuxeGrow Hair Growth Oil — Regrow. Restore. Radiate.</title>
+  <title>Adaure Argan Hair Oil — Grow Long, Thick & Shiny Hair Naturally</title>
+  <meta name="description" content="Adaure Moroccan Argan Hair Oil — Herbal formula for hair growth. Makes your hair Long, Soft and Shiny. Anti hair loss. 200ml. FREE delivery nationwide." />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__badge">★★★★★ Over 12,000 Happy Customers</div>
-    <h1 class="hero__headline">Stop Hiding Your Hair.<br><span>Start Growing It Back.</span></h1>
-    <p class="hero__sub">LuxeGrow Hair Growth Oil is a 100% natural, clinically-inspired blend that reawakens dormant follicles, reduces shedding, and delivers visibly thicker hair in just 30 days — or your money back.</p>
-    <a href="#order" class="btn btn--primary btn--lg">Get My Bottle Now — $39.99</a>
-    <p class="hero__guarantee">🔒 30-Day Money-Back Guarantee &nbsp;|&nbsp; Free Shipping Over $50</p>
-    <div class="hero__image-wrap">
-      <div class="hero__product-visual">
-        <div class="product-bottle">
-          <div class="bottle-label">
-            <div class="label-brand">LuxeGrow</div>
-            <div class="label-name">Hair Growth<br>Oil</div>
-            <div class="label-size">60ml</div>
-          </div>
-        </div>
-        <div class="product-glow"></div>
-      </div>
+<!-- STICKY NAV -->
+<header class="sticky-nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="brand-crown">♛</span>
+      <span class="brand-name">Adaure</span>
+      <span class="brand-sub">African Natural</span>
     </div>
-  </section>
+    <a href="order.html?src=nav" class="btn btn--gold btn--sm">Order Now — FREE Delivery</a>
+  </div>
+</header>
 
-  <!-- SOCIAL PROOF BAR -->
-  <section class="trust-bar">
-    <div class="trust-bar__inner">
-      <div class="trust-item">
-        <span class="trust-icon">🌿</span>
-        <span>100% Natural Ingredients</span>
+<!-- PURCHASE TICKER -->
+<div class="purchase-ticker ticker-hidden" id="purchaseTicker">
+  <span class="ticker-icon">🛒</span>
+  <span class="ticker-msg" id="tickerMsg">
+    <span class="ticker-name">Chidinma</span> from <span class="ticker-loc">Lagos</span> just ordered Adaure Argan Hair Oil!
+  </span>
+  <button class="ticker-close" onclick="closeTicker()">×</button>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">★★★★★ &nbsp; Trusted by 10,000+ Nigerians</div>
+      <h1 class="hero-headline">
+        Grow <span class="gold-text">Long, Thick</span><br>
+        &amp; Gorgeous Hair<br>
+        in Just 2 Weeks!
+      </h1>
+      <p class="hero-sub">
+        Adaure Moroccan Argan Hair Oil — Africa's #1 Herbal Formula for Hair Growth.<br>
+        <strong>Super lightweight. Anti-hair loss. Makes your hair Long, Soft &amp; Shiny.</strong>
+      </p>
+      <div class="hero-chips">
+        <span>✓ 100% Herbal Formula</span>
+        <span>✓ Anti-Hair Loss</span>
+        <span>✓ Super Lightweight</span>
+        <span>✓ Results in 2 Weeks</span>
+        <span>✓ 200ml per Bottle</span>
       </div>
-      <div class="trust-item">
-        <span class="trust-icon">🧪</span>
-        <span>Dermatologist Approved</span>
-      </div>
-      <div class="trust-item">
-        <span class="trust-icon">🚫</span>
-        <span>No Parabens or Sulfates</span>
-      </div>
-      <div class="trust-item">
-        <span class="trust-icon">♻️</span>
-        <span>Eco-Friendly Packaging</span>
-      </div>
+      <a href="order.html?src=hero" class="btn btn--hero">
+        🛒 ORDER NOW — FREE Delivery!
+      </a>
+      <p class="hero-urgency">⚡ Limited stock — Order before it sells out!</p>
     </div>
-  </section>
-
-  <!-- PROBLEM / AGITATE -->
-  <section class="section problem">
-    <div class="container">
-      <h2 class="section__title">You're Not Alone in This Struggle</h2>
-      <p class="section__sub">Millions of people deal with thinning hair, slow growth, and excessive shedding every day. The causes? Stress, hormonal shifts, poor nutrition, heat damage — the list goes on.</p>
-      <div class="pain-cards">
-        <div class="pain-card">
-          <div class="pain-icon">😔</div>
-          <p>Noticing more hair in the shower drain than ever before</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">😞</div>
-          <p>Hair that grows slowly and breaks before reaching your desired length</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">😟</div>
-          <p>A thinning scalp that's robbing your confidence</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">😤</div>
-          <p>Wasted money on products that promised everything and delivered nothing</p>
-        </div>
-      </div>
-      <p class="problem__bridge">That changes today. LuxeGrow was formulated specifically to address the <strong>root cause</strong> of hair loss — not just the symptoms.</p>
-    </div>
-  </section>
-
-  <!-- PRODUCT FEATURES -->
-  <section class="section features">
-    <div class="container">
-      <h2 class="section__title">The Science Behind Every Drop</h2>
-      <p class="section__sub">Our proprietary blend of 12 potent botanicals works synergistically to nourish your scalp from within.</p>
-      <div class="features__grid">
-        <div class="feature-card">
-          <div class="feature-icon">🫚</div>
-          <h3>Jamaican Black Castor Oil</h3>
-          <p>Strengthens hair shafts, reduces breakage, and promotes thickness by deeply moisturizing the scalp.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌹</div>
-          <h3>Rosemary Extract</h3>
-          <p>Clinically shown to be as effective as minoxidil for stimulating hair regrowth — without the side effects.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🫒</div>
-          <h3>Argan Oil</h3>
-          <p>Packed with vitamin E and fatty acids that repair damage, add shine, and prevent future breakage.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌿</div>
-          <h3>Peppermint Oil</h3>
-          <p>Increases circulation to follicles, kickstarting dormant hair growth cycles for visibly fuller hair.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌾</div>
-          <h3>Biotin Complex</h3>
-          <p>The essential B-vitamin that directly supports keratin production — the building block of every hair strand.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🧴</div>
-          <h3>Neem Oil</h3>
-          <p>Anti-fungal and anti-inflammatory properties soothe scalp conditions that hinder healthy hair growth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section how-it-works">
-    <div class="container">
-      <h2 class="section__title">Simple 3-Step Application</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step__number">01</div>
-          <h3>Part &amp; Apply</h3>
-          <p>Part your hair into sections and apply 8–10 drops directly onto your scalp.</p>
-        </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">02</div>
-          <h3>Massage In</h3>
-          <p>Use fingertips to massage for 3–5 minutes. This boosts absorption and blood circulation.</p>
-        </div>
-        <div class="step__arrow">→</div>
-        <div class="step">
-          <div class="step__number">03</div>
-          <h3>Leave &amp; Repeat</h3>
-          <p>Leave overnight or for at least 2 hours. Use 3–4 times weekly for best results.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BEFORE / AFTER TESTIMONIALS -->
-  <section class="section testimonials">
-    <div class="container">
-      <h2 class="section__title">Real Results from Real People</h2>
-      <p class="section__sub">These are unsponsored reviews from our community.</p>
-      <div class="testimonials__grid">
-        <div class="testimonial-card">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">"I've tried everything — serums, supplements, you name it. LuxeGrow is the only thing that actually worked. My hairline is filling back in after just 6 weeks!"</p>
-          <div class="testimonial__author">
-            <div class="author-avatar">A</div>
-            <div>
-              <strong>Amara T.</strong>
-              <span>Verified Buyer · Lagos, NG</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card testimonial-card--featured">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">"My edges were practically gone from years of braids. After 8 weeks of using LuxeGrow I have baby hairs growing in places I thought were dead forever. This oil is MAGIC."</p>
-          <div class="testimonial__author">
-            <div class="author-avatar">J</div>
-            <div>
-              <strong>Jasmine W.</strong>
-              <span>Verified Buyer · Atlanta, USA</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">"Postpartum hair loss had me in tears. A friend recommended this and I'm so grateful. My hair is thicker than it was even before my pregnancy. Absolutely recommend!"</p>
-          <div class="testimonial__author">
-            <div class="author-avatar">S</div>
-            <div>
-              <strong>Sofia M.</strong>
-              <span>Verified Buyer · London, UK</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING / OFFER -->
-  <section class="section pricing" id="pricing">
-    <div class="container">
-      <h2 class="section__title">Choose Your LuxeGrow Package</h2>
-      <p class="section__sub">The longer you commit, the more you save — and the better your results.</p>
-      <div class="pricing__grid">
-        <div class="pricing-card">
-          <div class="pricing-card__label">Starter</div>
-          <div class="pricing-card__bottles">1 Bottle</div>
-          <div class="pricing-card__price">$39.99</div>
-          <div class="pricing-card__per">$39.99 / bottle</div>
-          <ul class="pricing-card__perks">
-            <li>✓ 60ml (1-month supply)</li>
-            <li>✓ Free e-Guide: Haircare Routine</li>
-            <li>✓ 30-Day Money-Back Guarantee</li>
-          </ul>
-          <a href="#order" class="btn btn--outline">Order 1 Bottle</a>
-        </div>
-        <div class="pricing-card pricing-card--popular">
-          <div class="pricing-card__badge">Most Popular</div>
-          <div class="pricing-card__label">Growth Kit</div>
-          <div class="pricing-card__bottles">3 Bottles</div>
-          <div class="pricing-card__price">$99.99</div>
-          <div class="pricing-card__per"><s>$119.97</s> · Save $20</div>
-          <ul class="pricing-card__perks">
-            <li>✓ 3 × 60ml (3-month supply)</li>
-            <li>✓ Free e-Guide: Haircare Routine</li>
-            <li>✓ Free Scalp Massager ($15 value)</li>
-            <li>✓ 30-Day Money-Back Guarantee</li>
-            <li>✓ Free Shipping</li>
-          </ul>
-          <a href="#order" class="btn btn--primary">Order 3 Bottles</a>
-        </div>
-        <div class="pricing-card">
-          <div class="pricing-card__label">Ultimate Bundle</div>
-          <div class="pricing-card__bottles">6 Bottles</div>
-          <div class="pricing-card__price">$179.99</div>
-          <div class="pricing-card__per"><s>$239.94</s> · Save $60</div>
-          <ul class="pricing-card__perks">
-            <li>✓ 6 × 60ml (6-month supply)</li>
-            <li>✓ Free e-Guide: Haircare Routine</li>
-            <li>✓ Free Scalp Massager ($15 value)</li>
-            <li>✓ Priority Customer Support</li>
-            <li>✓ 30-Day Money-Back Guarantee</li>
-            <li>✓ Free Express Shipping</li>
-          </ul>
-          <a href="#order" class="btn btn--outline">Order 6 Bottles</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GUARANTEE -->
-  <section class="section guarantee">
-    <div class="container">
-      <div class="guarantee__inner">
-        <div class="guarantee__badge">
-          <div class="guarantee__icon">🛡️</div>
-          <div class="guarantee__days">30</div>
-          <div class="guarantee__label">Day Guarantee</div>
-        </div>
-        <div class="guarantee__text">
-          <h2>Our Risk-Free Promise</h2>
-          <p>We're so confident LuxeGrow will transform your hair that we offer a full 30-day money-back guarantee. If you don't see results — for any reason — contact us and we'll refund every penny. No questions asked. No hoops to jump through.</p>
-          <p><strong>You have absolutely nothing to lose and a full head of hair to gain.</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section faq">
-    <div class="container">
-      <h2 class="section__title">Frequently Asked Questions</h2>
-      <div class="faq__list">
-        <details class="faq__item">
-          <summary>How long before I see results?</summary>
-          <p>Most customers notice reduced shedding within 2 weeks. Visible new growth typically appears between weeks 4–8. For maximum density and thickness, we recommend a full 90-day regimen.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Is LuxeGrow safe for color-treated or chemically processed hair?</summary>
-          <p>Yes! LuxeGrow is completely safe for all hair types including color-treated, relaxed, natural, and heat-styled hair. Our formula is free of harsh chemicals that could strip color or alter your hair's structure.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Can men use LuxeGrow?</summary>
-          <p>Absolutely. LuxeGrow is formulated for all genders. It works effectively for both male and female pattern hair loss, receding hairlines, and general thinning.</p>
-        </details>
-        <details class="faq__item">
-          <summary>How long does one bottle last?</summary>
-          <p>One 60ml bottle lasts approximately 4–6 weeks with regular use (3–4 times per week). We recommend our 3-bottle bundle for a complete hair transformation cycle.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Will it make my hair greasy?</summary>
-          <p>LuxeGrow is a lightweight, fast-absorbing formula. When used in the correct amount and massaged in properly, it absorbs without leaving a greasy residue. Always start with 8–10 drops and adjust to your preference.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ORDER FORM -->
-  <section class="section order-section" id="order">
-    <div class="container">
-      <div class="order__wrapper">
-        <div class="order__left">
-          <h2>Claim Your LuxeGrow Order</h2>
-          <p>Fill in your details below and we'll get your order shipped within 24 hours.</p>
-          <div class="order__trust">
-            <span>🔒 Secure Checkout</span>
-            <span>📦 Fast Shipping</span>
-            <span>↩️ Easy Returns</span>
-          </div>
-        </div>
-        <div class="order__right">
-          <form id="orderForm" class="order-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
-                <span class="form-error" id="firstNameError"></span>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
-                <span class="form-error" id="lastNameError"></span>
+    <div class="hero-img-wrap">
+      <div class="hero-product-img">
+        <img src="images/product-hero.jpg" alt="Adaure Argan Hair Oil 200ml bottle with box"
+             onerror="this.style.display='none'; document.getElementById('bottleFallback').style.display='flex';" />
+        <div class="bottle-fallback" id="bottleFallback" style="display:none;">
+          <div class="css-bottle">
+            <div class="css-bottle-cap"></div>
+            <div class="css-bottle-body">
+              <div class="css-bottle-label">
+                <div class="l-crown">♛</div>
+                <div class="l-brand">Adaure</div>
+                <div class="l-sub">AFRICAN NATURAL</div>
+                <div class="l-product">ARGAN OIL</div>
+                <div class="l-size">Net 200ml (7oz)</div>
               </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
-              <span class="form-error" id="emailError"></span>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
-              <span class="form-error" id="phoneError"></span>
-            </div>
-            <div class="form-group">
-              <label for="address">Shipping Address *</label>
-              <input type="text" id="address" name="address" placeholder="123 Main Street" required />
-              <span class="form-error" id="addressError"></span>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="city">City *</label>
-                <input type="text" id="city" name="city" placeholder="New York" required />
-                <span class="form-error" id="cityError"></span>
-              </div>
-              <div class="form-group">
-                <label for="zip">ZIP / Postal Code *</label>
-                <input type="text" id="zip" name="zip" placeholder="10001" required />
-                <span class="form-error" id="zipError"></span>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="country">Country *</label>
-              <select id="country" name="country" required>
-                <option value="">Select your country</option>
-                <option value="US">United States</option>
-                <option value="GB">United Kingdom</option>
-                <option value="CA">Canada</option>
-                <option value="AU">Australia</option>
-                <option value="NG">Nigeria</option>
-                <option value="ZA">South Africa</option>
-                <option value="GH">Ghana</option>
-                <option value="OTHER">Other</option>
-              </select>
-              <span class="form-error" id="countryError"></span>
-            </div>
-            <div class="form-group">
-              <label for="package">Select Your Package *</label>
-              <select id="package" name="package" required>
-                <option value="">Choose a package</option>
-                <option value="starter">Starter — 1 Bottle · $39.99</option>
-                <option value="growth">Growth Kit — 3 Bottles · $99.99 (Save $20)</option>
-                <option value="ultimate">Ultimate Bundle — 6 Bottles · $179.99 (Save $60)</option>
-              </select>
-              <span class="form-error" id="packageError"></span>
-            </div>
-            <div class="form-group">
-              <label for="notes">Special Instructions (optional)</label>
-              <textarea id="notes" name="notes" rows="2" placeholder="Apartment number, delivery notes, etc."></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
-              <span id="btnText">Place My Order Now 🌿</span>
-              <span id="btnLoading" style="display:none;">Processing...</span>
-            </button>
-            <p class="form__disclaimer">By placing your order you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. Your information is 100% secure and never shared.</p>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <div class="footer__logo">LuxeGrow</div>
-          <p>Premium hair growth solutions crafted from nature's finest botanicals.</p>
-        </div>
-        <div class="footer__links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Shipping Policy</a>
-          <a href="#">Contact Us</a>
-        </div>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-item-icon">🌿</span><span>100% Herbal</span></div>
+    <div class="trust-item"><span class="trust-item-icon">🚀</span><span>Results in 2 Weeks</span></div>
+    <div class="trust-item"><span class="trust-item-icon">🚚</span><span>FREE Nationwide Delivery</span></div>
+    <div class="trust-item"><span class="trust-item-icon">⭐</span><span>10,000+ Happy Users</span></div>
+    <div class="trust-item"><span class="trust-item-icon">💧</span><span>Super Lightweight Oil</span></div>
+    <div class="trust-item"><span class="trust-item-icon">💰</span><span>Pay on Delivery</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAIN SECTION ═══════════════ -->
+<section class="section pain-section">
+  <div class="container">
+    <div class="section-label">ARE YOU STRUGGLING WITH THIS?</div>
+    <h2 class="section-title">Is Your Hair Going Through This?</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">😔</div>
+        <p>Hair thinning and receding hairline that won't stop</p>
       </div>
-      <div class="footer__bottom">
-        <p>© 2026 LuxeGrow Haircare. All rights reserved.</p>
-        <p class="footer__disclaimer">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      <div class="pain-card">
+        <div class="pain-icon">😞</div>
+        <p>Excessive hair loss and breakage every single day</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😟</div>
+        <p>Slow or stagnant hair growth for months on end</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😤</div>
+        <p>Dry, brittle, dull hair with absolutely no shine</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😢</div>
+        <p>Bald patches and embarrassing thin spots appearing</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💸</div>
+        <p>Wasted money on products that promised results but delivered nothing</p>
       </div>
     </div>
-  </footer>
+    <div class="pain-bridge">
+      <p>If you answered YES to any of these…</p>
+      <p>Adaure Argan Hair Oil was made for you. Our powerful herbal formula targets the root cause of hair loss and stimulates rapid, visible hair growth — starting in as little as 2 weeks.</p>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ═══ ORDER NOW BUTTON #1 ═══ -->
+<div class="mid-cta">
+  <div class="container text-center">
+    <a href="order.html?src=pain-section" class="btn btn--gold btn--lg">
+      🌿 YES! I Want Longer, Thicker Hair — Order Now!
+    </a>
+    <p class="cta-note">✅ FREE Delivery Nationwide &nbsp;|&nbsp; Pay on Delivery Available &nbsp;|&nbsp; 200ml per Bottle</p>
+  </div>
+</div>
+
+<!-- ═══════════════ PRODUCT SECTION ═══════════════ -->
+<section class="section product-section">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-img-col">
+        <img src="images/product-glamour.jpg" alt="Adaure Argan Hair Oil bottle and box on marble surface"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'product-img-fallback\'><div class=\'css-bottle\' style=\'transform:scale(1.3)\'><div class=\'css-bottle-cap\'></div><div class=\'css-bottle-body\'><div class=\'css-bottle-label\'><div class=\'l-crown\'>♛</div><div class=\'l-brand\'>Adaure</div><div class=\'l-sub\'>AFRICAN NATURAL</div><div class=\'l-product\'>ARGAN OIL</div><div class=\'l-size\'>200ml</div></div></div></div></div>'" />
+      </div>
+      <div class="product-info">
+        <div class="section-label">THE PRODUCT</div>
+        <h2>Adaure Moroccan Argan Hair Oil</h2>
+        <p class="product-tagline">Africa's Most Powerful Herbal Anti-Hair Loss Formula</p>
+        <ul class="product-benefits">
+          <li>✅ <strong>Stops Hair Loss</strong> — Herbal anti-hair loss formula that works from the root</li>
+          <li>✅ <strong>Grows Long Hair</strong> — Stimulates dormant follicles for rapid new growth</li>
+          <li>✅ <strong>Makes Hair Soft</strong> — Rich Moroccan Argan Oil deeply conditions every strand</li>
+          <li>✅ <strong>Adds Brilliant Shine</strong> — Your hair becomes glossy and strikingly beautiful</li>
+          <li>✅ <strong>Super Lightweight</strong> — No greasy residue; absorbs instantly into the scalp</li>
+          <li>✅ <strong>Works for Everyone</strong> — Men, women, all hair types including relaxed &amp; natural</li>
+        </ul>
+        <div class="size-badge">
+          <span class="size-badge-icon">📦</span>
+          <div>
+            <strong>200ml (7oz) per Bottle</strong>
+            <span>Generous size for months of consistent use</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW TO USE ═══════════════ -->
+<section class="section how-to-use">
+  <div class="container">
+    <div class="section-label">HOW TO USE</div>
+    <h2 class="section-title">Simple. Effective. Life-Changing.</h2>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num">STEP 01</div>
+        <div class="step-icon">💧</div>
+        <h3>Apply to Scalp</h3>
+        <p>Part your hair and apply Adaure Argan Oil directly onto your scalp and hair roots</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">STEP 02</div>
+        <div class="step-icon">✋</div>
+        <h3>Massage 1 Minute</h3>
+        <p>Gently massage into your scalp for <strong>1 full minute</strong> to boost blood circulation and oil absorption</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">STEP 03</div>
+        <div class="step-icon">🔁</div>
+        <h3>Repeat Twice Daily</h3>
+        <p>Use <strong>morning and night</strong> for best results. Consistency unlocks the fastest hair growth!</p>
+      </div>
+    </div>
+    <div class="usage-tip">
+      <span class="usage-tip-icon">💡</span>
+      <p><strong>Pro Tip:</strong> Adaure Argan Oil is super lightweight — no greasy feeling, no residue! You can apply it and go out immediately. Use consistently for the best and fastest results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ORDER NOW BUTTON #2 ═══ -->
+<div class="mid-cta">
+  <div class="container text-center">
+    <a href="order.html?src=how-to-use" class="btn btn--wine btn--lg">
+      🛒 Order Adaure Argan Hair Oil Now!
+    </a>
+    <p class="cta-note">✅ FREE Nationwide Delivery &nbsp;|&nbsp; 200ml per Bottle</p>
+  </div>
+</div>
+
+<!-- ═══════════════ BEFORE / AFTER ═══════════════ -->
+<section class="section before-after">
+  <div class="container">
+    <div class="section-label">REAL RESULTS</div>
+    <h2 class="section-title">See What Adaure Did for Real People</h2>
+    <p class="section-sub">No filters. No photoshop. Just genuine hair transformations from real Nigerians using Adaure Argan Hair Oil.</p>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <img src="images/before-after-1.jpg" alt="Before and after: Man's hair regrew after 3 months using Adaure Argan Oil"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'ba-img-fallback\'><span style=\'font-size:3rem\'>👨</span><p style=\'font-size:0.9rem;color:#6B5E4E;text-align:center;padding:0 16px\'>Before &amp; After — Man\'s hairline fully restored after 3 months</p></div><div class=\'ba-caption\'><strong>Emeka, 34 — Lagos</strong><p>\"After 3 months my hairline is completely back. People don\'t believe it\'s natural!\"</p></div>'" />
+        <div class="ba-caption">
+          <strong>Emeka, 34 — Lagos</strong>
+          <p>"After 3 months my hairline is completely back. People don't believe it's natural!"</p>
+        </div>
+      </div>
+      <div class="ba-card">
+        <img src="images/before-after-2.jpg" alt="Before and after: Woman's hair fully grew back after 3 months with Adaure"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'ba-img-fallback\'><span style=\'font-size:3rem\'>👩</span><p style=\'font-size:0.9rem;color:#6B5E4E;text-align:center;padding:0 16px\'>Before &amp; After — Woman\'s hair fully restored after 3 months</p></div><div class=\'ba-caption\'><strong>Ngozi, 28 — Enugu</strong><p>\"3 months of using Adaure and my hair is fuller than ever. Life-changing!\"</p></div>'" />
+        <div class="ba-caption">
+          <strong>Ngozi, 28 — Enugu</strong>
+          <p>"3 months of using Adaure and my hair is fuller than it's ever been in my life!"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-label">CUSTOMER REVIEWS</div>
+    <h2 class="section-title">What Nigerians Are Saying</h2>
+    <p class="section-sub">Over 10,000 customers across Nigeria. Here's what they're sharing:</p>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">Adaure Argan Oil is a miracle! I had serious hair loss after my second baby. After just 6 weeks, my hair started growing back thick and long. I'm telling every woman I know!</p>
+        <div class="t-author">
+          <div class="t-avatar">C</div>
+          <div><strong>Chidinma O.</strong><span>Verified Buyer · Lagos</span></div>
+        </div>
+      </div>
+      <div class="t-card t-card--featured">
+        <div class="t-badge">Most Helpful Review</div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">I've been using Adaure for 3 months and my hair has grown over 4 inches! My edges that were completely gone from tight braids are BACK. This oil is no joke — it genuinely WORKS!</p>
+        <div class="t-author">
+          <div class="t-avatar">N</div>
+          <div><strong>Ngozi A.</strong><span>Verified Buyer · Abuja</span></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">My husband was going bald and I bought Adaure for him as a gift. Within 2 months his hair started filling in. He's so happy he now buys extra bottles for his brothers!</p>
+        <div class="t-author">
+          <div class="t-avatar">F</div>
+          <div><strong>Fatima B.</strong><span>Verified Buyer · Kano</span></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">The oil is so lightweight — I was afraid it would be greasy but it's not at all! My hair is longer, shinier and softer than ever. Everyone at work keeps asking what I use!</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div><strong>Adaeze C.</strong><span>Verified Buyer · Enugu</span></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">I ordered the buy 2 get 1 free pack and it was the best decision of my life. My hair growth is insane now. People think I'm wearing extensions but it's all my real hair!</p>
+        <div class="t-author">
+          <div class="t-avatar">Y</div>
+          <div><strong>Yetunde M.</strong><span>Verified Buyer · Port Harcourt</span></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">In just 2 weeks I noticed my hair was shedding much less. By week 6, new baby hairs everywhere on my scalp. I've tried many oils but nothing worked like Adaure. Highly recommend!</p>
+        <div class="t-author">
+          <div class="t-avatar">B</div>
+          <div><strong>Blessing O.</strong><span>Verified Buyer · Benin City</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ORDER NOW BUTTON #3 ═══ -->
+<div class="mid-cta mid-cta--dark">
+  <div class="container text-center">
+    <h3>Join 10,000+ Nigerians Growing Their Hair With Adaure</h3>
+    <a href="order.html?src=testimonials" class="btn btn--hero">
+      🌿 Order Adaure Argan Hair Oil Now!
+    </a>
+    <p class="cta-note">✅ FREE Nationwide Delivery &nbsp;|&nbsp; 200ml per Bottle &nbsp;|&nbsp; Results in 2 Weeks</p>
+  </div>
+</div>
+
+<!-- ═══════════════ PRICING ═══════════════ -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">CHOOSE YOUR PACKAGE</div>
+    <h2 class="section-title">The More You Buy, The More You Save!</h2>
+    <p class="section-sub">All packages include FREE nationwide delivery. Choose the best deal for you!</p>
+    <div class="pricing-grid">
+
+      <div class="p-card">
+        <div class="p-label">Starter</div>
+        <div class="p-deal">1 Bottle</div>
+        <div class="p-vol">200ml</div>
+        <div class="p-price">₦18,000</div>
+        <div class="p-save">1 piece (200ml)</div>
+        <ul class="p-perks">
+          <li>✓ 1 × 200ml bottle</li>
+          <li>✓ FREE delivery</li>
+          <li>✓ Results in 2 weeks</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=starter" class="btn btn--outline-wine btn--full">Order Now</a>
+      </div>
+
+      <div class="p-card">
+        <div class="p-label">Value Deal</div>
+        <div class="p-deal">Buy 1 Get 1 FREE</div>
+        <div class="p-vol">2 bottles · 400ml total</div>
+        <div class="p-price">₦25,000</div>
+        <div class="p-save">Save ₦11,000!</div>
+        <ul class="p-perks">
+          <li>✓ 2 × 200ml bottles</li>
+          <li>✓ 1 bottle absolutely FREE</li>
+          <li>✓ FREE delivery</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=b1g1" class="btn btn--outline-wine btn--full">Order Now</a>
+      </div>
+
+      <div class="p-card p-card--pop">
+        <div class="p-badge">⭐ BEST VALUE</div>
+        <div class="p-label">Family Pack</div>
+        <div class="p-deal">Buy 2 Get 1 FREE</div>
+        <div class="p-vol">3 bottles · 600ml total</div>
+        <div class="p-price">₦35,000</div>
+        <div class="p-save">Save ₦19,000!</div>
+        <ul class="p-perks">
+          <li>✓ 3 × 200ml bottles</li>
+          <li>✓ 1 bottle absolutely FREE</li>
+          <li>✓ FREE delivery</li>
+          <li>✓ 3-month supply</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=b2g1" class="btn btn--gold btn--full">Order Now</a>
+      </div>
+
+      <div class="p-card">
+        <div class="p-label">Super Pack</div>
+        <div class="p-deal">Buy 3 Get 1 FREE</div>
+        <div class="p-vol">4 bottles · 800ml total</div>
+        <div class="p-price">₦45,000</div>
+        <div class="p-save">Save ₦27,000!</div>
+        <ul class="p-perks">
+          <li>✓ 4 × 200ml bottles</li>
+          <li>✓ 1 bottle absolutely FREE</li>
+          <li>✓ FREE delivery</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=b3g1" class="btn btn--outline-wine btn--full">Order Now</a>
+      </div>
+
+      <div class="p-card">
+        <div class="p-label">Mega Pack</div>
+        <div class="p-deal">Buy 4 Get 1 FREE</div>
+        <div class="p-vol">5 bottles · 1000ml total</div>
+        <div class="p-price">₦55,000</div>
+        <div class="p-save">Save ₦35,000!</div>
+        <ul class="p-perks">
+          <li>✓ 5 × 200ml bottles</li>
+          <li>✓ 1 bottle absolutely FREE</li>
+          <li>✓ FREE delivery</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=b4g1" class="btn btn--outline-wine btn--full">Order Now</a>
+      </div>
+
+      <div class="p-card">
+        <div class="p-label">Ultimate Pack</div>
+        <div class="p-deal">Buy 4 Get 2 FREE</div>
+        <div class="p-vol">6 bottles · 1200ml total</div>
+        <div class="p-price">₦60,000</div>
+        <div class="p-save">Save ₦48,000!</div>
+        <ul class="p-perks">
+          <li>✓ 6 × 200ml bottles</li>
+          <li>✓ 2 bottles absolutely FREE</li>
+          <li>✓ FREE delivery</li>
+          <li>✓ Share with the whole family</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=b4g2" class="btn btn--outline-wine btn--full">Order Now</a>
+      </div>
+
+      <div class="p-card p-card--premium">
+        <div class="p-badge p-badge--red">🔥 BIGGEST DEAL — RESELLERS PACK</div>
+        <div class="p-label">VIP Bundle</div>
+        <div class="p-deal">Buy 5 Get 7 FREE</div>
+        <div class="p-vol">12 bottles · 2400ml total</div>
+        <div class="p-price">₦80,000</div>
+        <div class="p-save">Save ₦136,000!</div>
+        <ul class="p-perks">
+          <li>✓ 12 × 200ml bottles</li>
+          <li>✓ 7 bottles absolutely FREE</li>
+          <li>✓ FREE priority delivery</li>
+          <li>✓ Perfect for resellers</li>
+          <li>✓ Over 1-year supply</li>
+        </ul>
+        <a href="order.html?src=pricing&pkg=b5g7" class="btn btn--gold btn--full">Order Now — Biggest Savings!</a>
+      </div>
+
+    </div>
+    <div class="pricing-footer">
+      <span>🚚</span>
+      <p><strong>FREE nationwide delivery</strong> on every single order. We ship to all 36 states + FCT Abuja within 1–3 business days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ORDER NOW BUTTON #4 ═══ -->
+<div class="mid-cta">
+  <div class="container text-center">
+    <a href="order.html?src=after-pricing" class="btn btn--hero">
+      🛒 Place Your Order Now — FREE Delivery!
+    </a>
+    <p class="cta-note">⚡ Stock is running out fast — secure yours today!</p>
+  </div>
+</div>
+
+<!-- ═══════════════ INGREDIENTS ═══════════════ -->
+<section class="section ingredients">
+  <div class="container">
+    <div class="section-label">WHY IT WORKS</div>
+    <h2 class="section-title">The Power of Moroccan Argan Oil</h2>
+    <p class="section-sub">Our herbal formula combines ancient African wisdom with the finest Moroccan botanicals for unbeatable results.</p>
+    <div class="ing-grid">
+      <div class="ing-card">
+        <div class="ing-icon">🫒</div>
+        <h3>Pure Moroccan Argan Oil</h3>
+        <p>Rich in Vitamin E and omega fatty acids that penetrate deep into hair shafts, eliminating dryness and stopping breakage</p>
+      </div>
+      <div class="ing-card">
+        <div class="ing-icon">🌿</div>
+        <h3>Powerful Herbal Extracts</h3>
+        <p>Special plant extracts stimulate blood flow to hair follicles, waking up dormant roots to produce rapid new growth</p>
+      </div>
+      <div class="ing-card">
+        <div class="ing-icon">🧴</div>
+        <h3>Anti-Hair Loss Complex</h3>
+        <p>Herbal blend that tackles the hormonal and nutritional root causes of hair loss directly at the follicle level</p>
+      </div>
+      <div class="ing-card">
+        <div class="ing-icon">✨</div>
+        <h3>Natural Shine Boosters</h3>
+        <p>Conditioning agents that smooth the hair cuticle from root to tip, creating brilliant mirror-like shine and softness</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GUARANTEE ═══════════════ -->
+<section class="section guarantee">
+  <div class="container">
+    <div class="guarantee-inner">
+      <div class="g-badge">
+        <div class="g-icon">🛡️</div>
+        <div class="g-pct">100%</div>
+        <div class="g-label">Satisfaction Guaranteed</div>
+      </div>
+      <div class="guarantee-text">
+        <h2>We Stand Behind Every Bottle</h2>
+        <p>We are so confident that Adaure Argan Hair Oil will transform your hair that we back every single order with our satisfaction guarantee. Thousands of Nigerians have already experienced the difference — and you will too.</p>
+        <p><strong>Order with complete confidence today. Your hair transformation starts with one decision.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How soon will I see results?</summary>
+        <p>Most customers notice reduced hair shedding within the <strong>first 2 weeks</strong>. Visible new growth typically appears between weeks 4–8. For maximum thickness and length, use consistently for 90 days.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Adaure Argan Oil greasy?</summary>
+        <p>Not at all! Adaure Argan Hair Oil is <strong>super lightweight</strong>. It absorbs quickly into your scalp and hair without leaving any greasy residue. You can apply it and go out immediately — even in the morning.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can men use this product?</summary>
+        <p>Absolutely! Adaure works for <strong>both men and women</strong>. It's excellent for male pattern baldness, receding hairlines, thinning crowns, and general hair loss in men. The before/after photos on this page include a male customer.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I use Adaure Argan Hair Oil?</summary>
+        <p>Apply the oil to your scalp and hair roots, then <strong>massage gently for 1 minute</strong>. Use <strong>twice daily</strong> — morning and night — for best results. No rinsing required.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is it safe for relaxed or color-treated hair?</summary>
+        <p>Yes! Adaure is completely safe for all hair types including relaxed, natural, color-treated, loc'd, and heat-styled hair. Our gentle herbal formula works without damaging your hair's structure.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does one 200ml bottle last?</summary>
+        <p>One 200ml bottle lasts approximately <strong>4–8 weeks</strong> with twice-daily use. We recommend the 3-bottle or larger packages for a complete, uninterrupted hair transformation journey.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you deliver to my state?</summary>
+        <p>Yes! We deliver to all <strong>36 states in Nigeria plus FCT Abuja</strong>. Delivery takes <strong>1–3 business days</strong>. Shipping is completely FREE on all orders.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Your Best Hair Is Waiting for You</h2>
+    <p>Don't let another day pass watching your hair thin out. <strong>10,000+ Nigerians</strong> have already made the decision — and they're loving their results!</p>
+    <a href="order.html?src=final-cta" class="btn btn--hero">
+      🛒 ORDER NOW — FREE Delivery Nationwide!
+    </a>
+    <div class="final-chips">
+      <span>✅ 100% Herbal Formula</span>
+      <span>✅ Super Lightweight</span>
+      <span>✅ Results in 2 Weeks</span>
+      <span>✅ FREE Delivery</span>
+      <span>✅ 200ml per Bottle</span>
+    </div>
+    <p class="stock-warn">⚠️ Stock is limited — We often sell out fast. Secure your order now!</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="brand-crown">♛</span>
+          <span>Adaure African Natural</span>
+        </div>
+        <p>Premium African haircare made with the finest Moroccan Argan Oil and powerful herbal extracts. Growing beautiful hair across Nigeria.</p>
+      </div>
+      <div class="footer-links">
+        <a href="order.html?src=footer">Order Now</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Adaure African Natural. All rights reserved.</p>
+      <p class="footer-disc">Individual results may vary. These statements have not been evaluated by NAFDAC. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

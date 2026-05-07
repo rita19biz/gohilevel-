@@ -1,80 +1,102 @@
-// Order form validation and submission
+// Sales page JS — Purchase Ticker
 
-const packagePrices = {
-  starter: { label: '1 Bottle — Starter', price: '$39.99' },
-  growth:  { label: '3 Bottles — Growth Kit', price: '$99.99' },
-  ultimate:{ label: '6 Bottles — Ultimate Bundle', price: '$179.99' },
-};
+const purchases = [
+  { name: 'Chidinma', city: 'Lagos Island' },
+  { name: 'Ngozi', city: 'Abuja' },
+  { name: 'Fatima', city: 'Kano' },
+  { name: 'Adaeze', city: 'Enugu' },
+  { name: 'Yetunde', city: 'Ibadan' },
+  { name: 'Blessing', city: 'Port Harcourt' },
+  { name: 'Chiamaka', city: 'Onitsha' },
+  { name: 'Zainab', city: 'Kaduna' },
+  { name: 'Chibundo', city: 'Aba' },
+  { name: 'Toyin', city: 'Abeokuta' },
+  { name: 'Aisha', city: 'Sokoto' },
+  { name: 'Kemi', city: 'Ikeja, Lagos' },
+  { name: 'Nneka', city: 'Owerri' },
+  { name: 'Ifunanya', city: 'Anambra' },
+  { name: 'Chioma', city: 'Asaba' },
+  { name: 'Esther', city: 'Jos' },
+  { name: 'Grace', city: 'Benin City' },
+  { name: 'Patience', city: 'Uyo' },
+  { name: 'Toluwalope', city: 'Surulere, Lagos' },
+  { name: 'Funmilayo', city: 'Ilorin' },
+  { name: 'Amara', city: 'Awka' },
+  { name: 'Obiageli', city: 'Warri' },
+  { name: 'Uchechi', city: 'Calabar' },
+  { name: 'Emeka', city: 'Lekki, Lagos' },
+  { name: 'Chukwudi', city: 'Maiduguri' },
+  { name: 'Tunde', city: 'Osogbo' },
+  { name: 'Dayo', city: 'Akure' },
+  { name: 'Musa', city: 'Katsina' },
+  { name: 'Ahmad', city: 'Bauchi' },
+  { name: 'Chidi', city: 'Umuahia' },
+  { name: 'Nnamdi', city: 'Lokoja' },
+  { name: 'Ikenna', city: 'Nnewi' },
+  { name: 'Sonia', city: 'Wuse, Abuja' },
+  { name: 'Rejoice', city: 'Yola' },
+  { name: 'Precious', city: 'Makurdi' },
+  { name: 'Oluwaseun', city: 'Ikorodu, Lagos' },
+  { name: 'Adunola', city: 'Ile-Ife' },
+  { name: 'Chinyere', city: 'Orlu' },
+  { name: 'Maryam', city: 'Gusau' },
+  { name: 'Halimah', city: 'Birnin Kebbi' },
+];
 
-const validators = {
-  firstName: v => v.trim().length >= 2  ? '' : 'Please enter your first name.',
-  lastName:  v => v.trim().length >= 2  ? '' : 'Please enter your last name.',
-  email:     v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
-  phone:     v => v.trim().length >= 7  ? '' : 'Please enter a valid phone number.',
-  address:   v => v.trim().length >= 5  ? '' : 'Please enter your shipping address.',
-  city:      v => v.trim().length >= 2  ? '' : 'Please enter your city.',
-  zip:       v => v.trim().length >= 3  ? '' : 'Please enter your ZIP / postal code.',
-  country:   v => v !== ''              ? '' : 'Please select your country.',
-  package:   v => v !== ''              ? '' : 'Please select a package.',
-};
+let tickerClosed = false;
+let tickerIdx = Math.floor(Math.random() * purchases.length);
+const ticker    = document.getElementById('purchaseTicker');
+const tickerMsg = document.getElementById('tickerMsg');
 
-function showError(fieldId, message) {
-  const input = document.getElementById(fieldId);
-  const error = document.getElementById(fieldId + 'Error');
-  if (input) input.classList.toggle('invalid', !!message);
-  if (error) error.textContent = message;
-}
+function showTicker() {
+  if (tickerClosed || !ticker) return;
+  const p = purchases[tickerIdx % purchases.length];
+  tickerIdx++;
 
-function validateField(fieldId) {
-  const input = document.getElementById(fieldId);
-  if (!input || !validators[fieldId]) return true;
-  const error = validators[fieldId](input.value);
-  showError(fieldId, error);
-  return error === '';
-}
+  tickerMsg.innerHTML =
+    `<span class="ticker-name">${p.name}</span> from <span class="ticker-loc">${p.city}</span> ` +
+    `just ordered <span class="ticker-product">Adaure Argan Hair Oil!</span>`;
 
-// Live validation on blur
-Object.keys(validators).forEach(id => {
-  const el = document.getElementById(id);
-  if (el) el.addEventListener('blur', () => validateField(id));
-});
+  ticker.classList.remove('ticker-hidden', 'ticker-exit');
+  ticker.classList.add('ticker-enter');
 
-document.getElementById('orderForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const fields = Object.keys(validators);
-  const valid = fields.map(id => validateField(id)).every(Boolean);
-
-  if (!valid) {
-    const firstInvalid = fields.find(id => !validateField(id));
-    if (firstInvalid) document.getElementById(firstInvalid).focus();
-    return;
-  }
-
-  // Show loading state
-  const btn     = document.getElementById('submitBtn');
-  const btnText = document.getElementById('btnText');
-  const btnLoad = document.getElementById('btnLoading');
-  btn.disabled    = true;
-  btnText.style.display = 'none';
-  btnLoad.style.display = 'inline';
-
-  // Collect form data and persist for thank-you page
-  const data = {
-    firstName: document.getElementById('firstName').value.trim(),
-    lastName:  document.getElementById('lastName').value.trim(),
-    email:     document.getElementById('email').value.trim(),
-    address:   document.getElementById('address').value.trim(),
-    city:      document.getElementById('city').value.trim(),
-    zip:       document.getElementById('zip').value.trim(),
-    country:   document.getElementById('country').value,
-    package:   document.getElementById('package').value,
-  };
-
-  sessionStorage.setItem('luxegrow_order', JSON.stringify(data));
-
-  // Simulate brief processing delay then redirect
   setTimeout(() => {
-    window.location.href = 'thank-you.html';
-  }, 1200);
+    if (!tickerClosed) hideTicker();
+  }, 5500);
+}
+
+function hideTicker() {
+  if (!ticker) return;
+  ticker.classList.remove('ticker-enter');
+  ticker.classList.add('ticker-exit');
+  setTimeout(() => {
+    ticker.classList.add('ticker-hidden');
+    ticker.classList.remove('ticker-exit');
+  }, 450);
+}
+
+function closeTicker() {
+  tickerClosed = true;
+  hideTicker();
+}
+
+// First show after 4s, then repeat every 12s
+setTimeout(() => {
+  showTicker();
+  setInterval(() => { if (!tickerClosed) showTicker(); }, 12000);
+}, 4000);
+
+// Auto-select package from URL param
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const pkg = params.get('pkg');
+  if (pkg) sessionStorage.setItem('adaure_preselect_pkg', pkg);
+})();
+
+// Smooth scroll for any #anchor links on this page
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
 });
